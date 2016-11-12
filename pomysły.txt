@@ -7,3 +7,9 @@ Wypełnianie pół, czy przycisnięte pole jest editable
 
 Może opcja kontynuuj, przy zamykaniu aplikacji sprawdzalibyśmy, czy gra dobiegła końca, jeśli nie to 
 zapisujemy lokalnie w playerPrefs(albo playerprefabs, jakoś tak)
+
+
+MODUŁY:
+LOGIKA- generator planszy, kontrola statystyk, mechanika gry
+GUI- kontrola menu, kontrola przycisków, graficzne sprawy
+SOUND- kontrola dźwięku, efekty dźwiękowe
