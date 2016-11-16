@@ -13,6 +13,14 @@ public class GameController : MonoBehaviour {
 	
 	}
 
+    public void ButtonClicked(int x)
+    {
+        Debug.Log("Button"+x+"  "+y);
+    }
+    public void DoSmoething(int a)
+    {
+
+    }
 
 
 }

@@ -54,14 +54,18 @@ public class MenuController : MonoBehaviour {
     public void ContinueButton()
     {
 
+
     }
 
     public void StartGame()
     {
 
+
     }
-    public void ViewScoresButton() { }
-    public void ViewTutorialButton() { }
+    public void ViewScoresButton(int a) {
+    }
+    public void ViewTutorialButton(int a) {
+    }
     private void BringInitMenu()
     {
         exitButton.SetActive(true);
