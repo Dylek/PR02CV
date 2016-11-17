@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MenuController : MonoBehaviour {
 
-   public GameObject startButton;
+    public GameObject startButton;
     public GameObject exitButton;
     public GameObject newGameButton;
     public GameObject scoresButton;
@@ -24,7 +24,7 @@ public class MenuController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+	    
 	}
 
     public void NewGame()
