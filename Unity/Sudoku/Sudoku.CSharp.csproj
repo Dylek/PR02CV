@@ -63,11 +63,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\MenuController.cs" />
-    <Compile Include="Assets\Scripts\ScoreController.cs" />
-    <Compile Include="Assets\Scripts\SoundController.cs" />
-    <Compile Include="Assets\Scripts\SudokuGenerator.cs" />
+    <Compile Include="Assets\Scripts\GUI\InterfaceController.cs" />
+    <Compile Include="Assets\Scripts\GUI\MenuController.cs" />
+    <Compile Include="Assets\Scripts\GUI\SudokuField.cs" />
+    <Compile Include="Assets\Scripts\Logic\GameController.cs" />
+    <Compile Include="Assets\Scripts\Logic\ScoreController.cs" />
+    <Compile Include="Assets\Scripts\Logic\SudokuGenerator.cs" />
+    <Compile Include="Assets\Scripts\SoundModule\SoundController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

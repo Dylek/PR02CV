@@ -19,4 +19,9 @@ public class InterfaceController : MonoBehaviour {
     {
         text.text = "You Clicekd " + xy / 10 + "  " + xy % 10;
     }
+    public void ButtonClicked2(Button but)
+    {
+        
+
+    }
 }

@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
 
     public static GameController instance = null;
-
+    private Button clickedFieldButton;
+    private int xButton;
+    private int yButtom;
     //Robimy singleton
     void Awake()
     {
@@ -37,5 +40,10 @@ public class GameController : MonoBehaviour {
 
     }
 
-
+    public void setClicked(int x,int y, Button b)
+    {
+        xButton = x;
+        yButtom = y;
+        clickedFieldButton = b;
+    }
 }
