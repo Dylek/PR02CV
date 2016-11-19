@@ -33,4 +33,8 @@ public class SudokuField : MonoBehaviour {
         
 	}
 
+    public void SetText(string str)
+    {
+        text.text = str;
+    }
 }

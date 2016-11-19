@@ -6,6 +6,7 @@ public class SoundController : MonoBehaviour {
 
     //dzięki kilku źródłom dźwięku chronimy się od sutuacjy gdy zagranie jednego dźwięku urywa inny
     private List<AudioSource> audioSourcePool;
+    public AudioClip buttonClickedSound;
     //SoundContoller to singleton
     public static SoundController instance = null;
     void Awake(){

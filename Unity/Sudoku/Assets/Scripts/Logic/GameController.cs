@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class GameController : MonoBehaviour {
 
@@ -11,7 +12,7 @@ public class GameController : MonoBehaviour {
     private int yButtom;
     private Color pressed = new Color();    
     private Color colorBackup;
-
+    private SudokuField[][] sudokuBoard;
 
     //Robimy singleton
     void Awake(){
@@ -25,24 +26,18 @@ public class GameController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //TODO zbierz buttony
+        GameObject[] buttons = GameObject.FindGameObjectsWithTag("button");
         //TODO powsadzaj je w odpowiednie miejsca
+        foreach (GameObject obj in buttons)
+        {
+            SudokuField temp = GameObject.FindObjectOfType<SudokuField>();
+            sudokuBoard[temp.y][temp.x] = temp;
+        }        
         //TODO odpal generowanie sudoku w zależności od poziomu
         ColorUtility.TryParseHtmlString("FF7575FF", out pressed);
     }
 	
-	// Update is called once per frame
-	void Update () {
 	
-	}
-
-    public void ButtonClicked(int x)
-    {
-        Debug.Log("Button"+x);
-    }
-    public void DoSmoething(int a)
-    {
-
-    }
 
     public void SetClicked(SudokuField sudokuField)
     {
@@ -66,11 +61,12 @@ public class GameController : MonoBehaviour {
 
     public void ClearField(SudokuField suF)
     {
-
+        suF.sudokuValue = 0;
+        suF.SetText(" ");
     }
     public void CheckGameRules()
     {
-
+        //TODO w kij dużo if'ów
     }
 
 
