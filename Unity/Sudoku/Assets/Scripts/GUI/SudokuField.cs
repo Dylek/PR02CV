@@ -3,9 +3,11 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 public class SudokuField : MonoBehaviour {
+    public int x;
+    public int y;
     public int sudokuValue=0;
-    public int SudokuValue
-    {
+    public Button button;
+    public int SudokuValue {
         get { return sudokuValue; }
         set {
             sudokuValue = value;
@@ -19,8 +21,7 @@ public class SudokuField : MonoBehaviour {
         set{generated = value;}
         get { return generated;}
     }
-    public int x;
-    public int y;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -31,4 +32,5 @@ public class SudokuField : MonoBehaviour {
 	void Update () {
         
 	}
+
 }

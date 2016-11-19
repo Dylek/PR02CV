@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 public class SoundController : MonoBehaviour {
 
-
+    //dzięki kilku źródłom dźwięku chronimy się od sutuacjy gdy zagranie jednego dźwięku urywa inny
     private List<AudioSource> audioSourcePool;
+    //SoundContoller to singleton
     public static SoundController instance = null;
-    void Awake()
-    {
+    void Awake(){
         if (instance == null)
         {
             instance = this;
@@ -21,9 +21,7 @@ public class SoundController : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start()
-    {
-
+    void Start(){
         audioSourcePool = new List<AudioSource>();
         for (int i = 0; i < 10; i++)
         {
@@ -35,16 +33,13 @@ public class SoundController : MonoBehaviour {
     }
 
   
-    public void PlayMyClip(AudioClip clip)
-    {
+    public void PlayMyClip(AudioClip clip){
         GetFirstFree().PlayOneShot(clip, 1f);
     }
-    public AudioSource GetFirstFree()
-    {
-        foreach (AudioSource temp in audioSourcePool)
-        {
-            if (temp.isPlaying == false)
-            {
+    //Bierzemy kolejne źródło które nie gra w danym momencie
+    public AudioSource GetFirstFree(){
+        foreach (AudioSource temp in audioSourcePool){
+            if (temp.isPlaying == false){
                 return temp;
             }
         }

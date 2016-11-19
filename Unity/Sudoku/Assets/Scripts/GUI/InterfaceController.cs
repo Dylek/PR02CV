@@ -5,9 +5,10 @@ using System.Collections.Generic;
 public class InterfaceController : MonoBehaviour {
 
     public Text text;
+    private GameController gameContoller;
     // Use this for initialization
     void Start() {
-
+        gameContoller = GameController.instance;
     }
 
     // Update is called once per frame
@@ -17,11 +18,25 @@ public class InterfaceController : MonoBehaviour {
 
     public void ButtonClicked(int xy)
     {
-        text.text = "You Clicekd " + xy / 10 + "  " + xy % 10;
+        text.text = "You Clicekd " + xy / 10 + "  " + xy % 10+"\n Value";
     }
     public void ButtonClicked2(Button but)
     {
         
 
     }
+    public void SudokuFieldCliecked(SudokuField su)
+    {
+        text.text = "You Clicekd [X,Y]: [" + su.x + "," + su.y + "]\n Value: "+su.sudokuValue+"\n Button:"+ su.button.ToString();
+    }
+
+    public void ClearFieldButt(SudokuField suF)
+    {
+        gameContoller.ClearField(suF);
+    }
+    public void CheckGameRulesButt()
+    {
+        gameContoller.CheckGameRules();
+    }
+
 }

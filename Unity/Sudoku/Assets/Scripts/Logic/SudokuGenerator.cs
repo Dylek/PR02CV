@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum DifficultLevel
+{
+    easy,
+    medium,
+    hard
+}
 public class SudokuGenerator : MonoBehaviour {
 
 	// Use this for initialization
@@ -12,4 +18,13 @@ public class SudokuGenerator : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    //na podstawie poziomu trundości zwraca nam odpowiednio wygenerowaną planszę
+    public static int[][] GenerateSudokuBoard(DifficultLevel diff) {
+        int[][] board=new int[9][];
+
+
+
+        return board;
+    }
 }
