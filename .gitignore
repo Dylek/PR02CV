@@ -5,12 +5,12 @@
 *
 ## Ignore all, except:
 # Unity must-have directories:
-![aA]ssets
-![aA]ssets/**
-![pP]roject[sS]ettings
-![pP]roject[sS]ettings/**
-[bB]uilds
-[bB]uilds/**
+!Unity/Sudoku/[aA]ssets
+!Unity/Sudoku/[aA]ssets/**
+!Unity/Sudoku/[pP]roject[sS]ettings
+!Unity/Sudoku/[pP]roject[sS]ettings/**
+Unity/Sudoku/[bB]uilds
+Unity/Sudoku/[bB]uilds/**
 # Git settings:
 !.gitignore
 !.gitattributes
@@ -20,6 +20,8 @@
 ![dD]ocs/**
 ![dD]ocuments
 ![dD]ocuments/**
+!Dokumentacja
+!materiały
 # Readme
 ![rR]eadme.*
 !README.*
