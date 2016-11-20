@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerOptions : MonoBehaviour {
+public static class PlayerOptions{
     private static string playerNick;
     private static int playerScore;
     private static float playerTime;

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="InterfaceController">
+    <Position X="2.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgAAACAAAAAAAAAEAAgAABAAAAAIAAAAAEACAgA=</HashCode>
+      <FileName>Assets\Scripts\GUI\InterfaceController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuController">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAoCAgAKAAoAARACAgBQBAAAAQAAAAAAiAgAA=</HashCode>
+      <FileName>Assets\Scripts\GUI\MenuController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SudokuField">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAABAACAAAAAAAIAAAAAAAAAACAAIQABgAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GUI\SudokuField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameController">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAQAACABABAAAAAQAAAAAAJAAAAAAAAgAFAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Logic\GameController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveController">
+    <Position X="0.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Logic\SaveController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScoreController">
+    <Position X="2.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Logic\ScoreController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SudokuGenerator">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAACACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Logic\SudokuGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundController">
+    <Position X="4" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAIgAAACAAAAAAIAAAAAAAAABAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\SoundModule\SoundController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoNotDestroyOnLoad">
+    <Position X="4.25" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\DoNotDestroyOnLoad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerOptions">
+    <Position X="2.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAQAAEAACABAAAAAAEQAAAAAAAAAAAAAQEAIA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\PlayerOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="DifficultLevel">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Logic\SudokuGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

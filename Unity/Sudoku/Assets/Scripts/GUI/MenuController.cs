@@ -12,9 +12,9 @@ public class MenuController : MonoBehaviour {
     public GameObject tutorialButton;
     public GameObject continueButton;
     public GameObject backButton;
-    public Slider diffSlider;
-    public Slider gameTypeStuff;
-    public InputField nick;
+    public GameObject diffSlider;
+    public GameObject gameTypeStuff;
+    public GameObject nick;
 
 	// Use this for initialization
 	void Start () {
@@ -36,9 +36,10 @@ public class MenuController : MonoBehaviour {
         scoresButton.SetActive(false);
         tutorialButton.SetActive(false);
         continueButton.SetActive(false);
-        diffSlider.gameObject.SetActive(true);
-        gameTypeStuff.gameObject.SetActive(true);
-        nick.gameObject.SetActive(true);
+        diffSlider.SetActive(true);
+        gameTypeStuff.SetActive(true);
+        nick.SetActive(true);
+        
         startButton.SetActive(true);
         backButton.SetActive(true);
 
@@ -58,25 +59,31 @@ public class MenuController : MonoBehaviour {
 
     public void ContinueButton()
     {
-        //nie robić save Controlla?
-        //tu od razu będę robnił
+        if (CheckSave())
+        {
+            SaveController.GetSavedGame();
+        }
 
     }
 
     public void StartGame()
     {
         DifficultLevel diff;
-        switch ((int)diffSlider.value)
+        switch ((int)diffSlider.GetComponent<Slider>().value)
         {
             case 1: diff = DifficultLevel.easy;break;
             case 2: diff = DifficultLevel.easy; break;
             case 3: diff = DifficultLevel.easy; break;
             default: diff = DifficultLevel.easy; break;
         }
-        PlayerOptions.PlayerGameType =(int) gameTypeStuff.value;
-        PlayerOptions.PlayerNick = nick.text;
+        Debug.Log("switch ");
+        PlayerOptions.PlayerGameType =(int) gameTypeStuff.GetComponent<Slider>().value;
+        Debug.Log("PlayerGameType");
+        PlayerOptions.PlayerNick = nick.GetComponent<InputField>().text;
+        Debug.Log("PlayerNick");
         PlayerOptions.PlayerLevel = diff;
-        SceneManager.LoadScene("Sudoku");
+        Debug.Log("PlayerLevel ");
+        SceneManager.LoadScene("sudoku");
 
     }
     public void ViewScoresButton(int a) {
@@ -91,31 +98,23 @@ public class MenuController : MonoBehaviour {
         scoresButton.SetActive(true);
         tutorialButton.SetActive(true);
         continueButton.SetActive(true);
-        nick.gameObject.SetActive(false);
+        nick.SetActive(false);
         backButton.SetActive(false);
-        diffSlider.gameObject.SetActive(false);
-        gameTypeStuff.gameObject.SetActive(false);
+        diffSlider.SetActive(false);
+        gameTypeStuff.SetActive(false);
         startButton.SetActive(false);
+        if (!CheckSave())
+        {
+            continueButton.GetComponent<Button>().interactable = false;
+        }
     }
 
     //Sprawdzenie czy w player prefabs jest UnfinishedGame
     private bool CheckSave()
     {
         bool unfinishedGame = false;
-        string diffLevel;
         unfinishedGame = PlayerPrefs.HasKey("unfinishedGame");
-        PlayerOptions.PlayerGameType = PlayerPrefs.GetInt("PlayerGameType");
-        PlayerOptions.PlayerNick = PlayerPrefs.GetString("PlayerNick");
-        diffLevel = PlayerPrefs.GetString("PlayerLevel");
-        switch (diffLevel)
-        {
-            case "easy": PlayerOptions.PlayerLevel = DifficultLevel.easy;break;
-            case "medium": PlayerOptions.PlayerLevel = DifficultLevel.medium; break;
-            case "hard": PlayerOptions.PlayerLevel = DifficultLevel.hard; break;
-            default:   PlayerOptions.PlayerLevel = DifficultLevel.easy; break;
-        }
-        PlayerOptions.PlayerTime = PlayerPrefs.GetFloat("PlayerTime");
-        PlayerOptions.PlayerScore = PlayerPrefs.GetInt("PlayerScore");
+       
         return unfinishedGame;
     }
 }

@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour {
     private int yButtom;
     private Color pressed = new Color();    
     private Color colorBackup;
-    private SudokuField[][] sudokuBoard;
+    private SudokuField[,] sudokuBoard = new SudokuField[9, 9];
 
     //Robimy singleton
     void Awake(){
@@ -25,19 +25,33 @@ public class GameController : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
+        clickedFieldButton = null;
         //TODO zbierz buttony
+        Debug.Log("sudokuBoard[temp.y][temp.x]|:" + sudokuBoard.GetType());
         GameObject[] buttons = GameObject.FindGameObjectsWithTag("button");
+        Debug.Log(buttons.Length);
         //TODO powsadzaj je w odpowiednie miejsca
         foreach (GameObject obj in buttons)
         {
+            SudokuField ten = obj.GetComponent<SudokuField>();
+            Debug.Log("ten|:"+ten.GetInstanceID());
+
             SudokuField temp = GameObject.FindObjectOfType<SudokuField>();
-            sudokuBoard[temp.y][temp.x] = temp;
+            Debug.Log("temp|:" + temp.GetInstanceID());
+            //SudokuField temp = obj.GetComponent<SudokuField>();
+            sudokuBoard[temp.y-1,temp.x-1] = temp;//TU COŚ NIE PYKA
+            Debug.Log("sudokuBoard[temp.y][temp.x]|:" + sudokuBoard.GetType());
         }        
         //TODO odpal generowanie sudoku w zależności od poziomu
         ColorUtility.TryParseHtmlString("FF7575FF", out pressed);
     }
 	
-	
+	public void SetButtonNumber(int a)
+    {
+        Debug.Log("yButtom-xButton:" + (yButtom ) +":"+ (xButton ));
+        sudokuBoard[yButtom-1,xButton-1].SetText(a.ToString());
+        sudokuBoard[yButtom-1,xButton-1].sudokuValue = a;
+    }
 
     public void SetClicked(SudokuField sudokuField)
     {

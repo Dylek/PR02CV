@@ -25,9 +25,16 @@ public class InterfaceController : MonoBehaviour {
         
 
     }
+
+    public void NumberClicked(int a)
+    {
+        gameContoller.SetButtonNumber(a);
+    }
+
     public void SudokuFieldCliecked(SudokuField su)
     {
         text.text = "You Clicekd [X,Y]: [" + su.x + "," + su.y + "]\n Value: "+su.sudokuValue+"\n Button:"+ su.button.ToString();
+        gameContoller.SetClicked(su);
     }
 
     public void ClearFieldButt(SudokuField suF)
