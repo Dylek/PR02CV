@@ -7,11 +7,11 @@ public class GameController : MonoBehaviour {
 
 
     public static GameController instance = null;
-    private Button clickedFieldButton;
+    protected Button clickedFieldButton=null;
     private int xButton;
     private int yButtom;
     private Color pressed = new Color();    
-    private Color colorBackup;
+    private Color colorBackup=new Color();
     private SudokuField[,] sudokuBoard = new SudokuField[9, 9];
 
     //Robimy singleton
@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour {
             Debug.Log("sudokuBoard[temp.y][temp.x]|:" + sudokuBoard.GetType());
         }        
         //TODO odpal generowanie sudoku w zależności od poziomu
-        ColorUtility.TryParseHtmlString("FF7575FF", out pressed);
+        ColorUtility.TryParseHtmlString("0D17E4FF", out pressed);
     }
 	
 	public void SetButtonNumber(int a)
@@ -55,22 +55,19 @@ public class GameController : MonoBehaviour {
 
     public void SetClicked(SudokuField sudokuField)
     {
-        ColorBlock cb;
-        //kiepawo unity kiepawo, 3 linie na głupią zmianę kloloru
-        if (!clickedFieldButton.Equals(null) && !colorBackup.Equals(null))
-        {           
-           cb= clickedFieldButton.colors;
-            cb.normalColor = colorBackup;
-            clickedFieldButton.colors = cb;           
-        }
-
+        
         xButton = sudokuField.x;
         yButtom = sudokuField.y;
-        clickedFieldButton = sudokuField.button;
-        colorBackup = clickedFieldButton.colors.normalColor;
 
-        cb = clickedFieldButton.colors;
-        cb.normalColor = pressed;
+        if (!GameObject.ReferenceEquals(clickedFieldButton, null))
+        {
+            clickedFieldButton.image.color = colorBackup;
+        }
+        
+        colorBackup = sudokuField.button.image.color;       
+        clickedFieldButton = sudokuField.button;
+        sudokuField.button.image.color = Color.red;
+       
     }
 
     public void ClearField(SudokuField suF)
