@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour {
     protected Button clickedFieldButton=null;
     private int xButton;
     private int yButtom;
-    private Color pressed = new Color();    
+    //private Color pressed = new Color();    
     private Color colorBackup=new Color();
     private SudokuField[,] sudokuBoard = new SudokuField[9, 9];
 
@@ -34,16 +34,18 @@ public class GameController : MonoBehaviour {
         foreach (GameObject obj in buttons)
         {
             SudokuField ten = obj.GetComponent<SudokuField>();
-            Debug.Log("ten|:"+ten.GetInstanceID());
+           // Debug.Log("ten|:"+ten.GetInstanceID());
 
-            SudokuField temp = GameObject.FindObjectOfType<SudokuField>();
-            Debug.Log("temp|:" + temp.GetInstanceID());
+            //SudokuField temp = GameObject.FindObjectOfType<SudokuField>();
+           // Debug.Log("temp|:" + temp.GetInstanceID());
             //SudokuField temp = obj.GetComponent<SudokuField>();
-            sudokuBoard[temp.y-1,temp.x-1] = temp;//TU COŚ NIE PYKA
-            Debug.Log("sudokuBoard[temp.y][temp.x]|:" + sudokuBoard.GetType());
-        }        
+            sudokuBoard[ten.y-1, ten.x-1] = ten;//TU COŚ NIE PYKA
+            //Debug.Log("sudokuBoard[ten.y][ten.x]|:" + sudokuBoard.GetType());
+            Debug.Log("sudokuBoard["+ (ten.y - 1) + ","+(ten.x - 1) +"|:" + sudokuBoard[ten.y - 1, ten.x - 1].gameObject.GetInstanceID());
+
+        }
         //TODO odpal generowanie sudoku w zależności od poziomu
-        ColorUtility.TryParseHtmlString("0D17E4FF", out pressed);
+        // ColorUtility.TryParseHtmlString("0D17E4FF", out pressed);
     }
 	
 	public void SetButtonNumber(int a)
