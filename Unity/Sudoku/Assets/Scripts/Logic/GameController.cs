@@ -45,6 +45,17 @@ public class GameController : MonoBehaviour {
 
         }
         //TODO odpal generowanie sudoku w zależności od poziomu
+        SudokuGenerator.GenerateSudokuBoard(DifficultLevel.medium);
+        Debug.Log("WTF:"+sudokuBoard[4,7]);       
+        foreach(SudokuField sd in sudokuBoard)
+        {
+            int k;
+            k = sd.y;
+            k = sd.x;
+            // sd.sudokuValue = SudokuGenerator.a[sd.y, sd.x];
+            int a=SudokuGenerator.a[sd.y - 1, sd.x - 1];
+            sd.SudokuValue = SudokuGenerator.a[sd.y-1,sd.x-1];
+        }
         // ColorUtility.TryParseHtmlString("0D17E4FF", out pressed);
     }
 	

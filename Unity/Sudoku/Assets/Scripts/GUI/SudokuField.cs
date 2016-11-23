@@ -11,7 +11,8 @@ public class SudokuField : MonoBehaviour {
         get { return sudokuValue; }
         set {
             sudokuValue = value;
-            text.text = "" + sudokuValue;
+            
+            text.text = value==0?"": "" + sudokuValue;
         }
     }
     private Text text;
@@ -24,8 +25,9 @@ public class SudokuField : MonoBehaviour {
     
 
 	// Use this for initialization
-	void Start () {
-        text=(Text)gameObject.GetComponentInChildren(typeof(Text));
+	void Awake () {
+       text=gameObject.GetComponentInChildren<Text>();
+       // text=gameObject.
 	}
 	
 	// Update is called once per frame
