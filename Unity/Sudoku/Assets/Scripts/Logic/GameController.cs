@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour {
     {
         Debug.Log("yButtom-xButton:" + (yButtom ) +":"+ (xButton ));
         sudokuBoard[yButtom-1,xButton-1].SetText(a.ToString());
-        sudokuBoard[yButtom-1,xButton-1].sudokuValue = a;
+        sudokuBoard[yButtom-1,xButton-1].SudokuValue = a;
     }
 
     public void SetClicked(SudokuField sudokuField)
@@ -83,10 +83,10 @@ public class GameController : MonoBehaviour {
        
     }
 
-    public void ClearField(SudokuField suF)
+    public void ClearField()
     {
-        suF.sudokuValue = 0;
-        suF.SetText(" ");
+        sudokuBoard[yButtom-1,xButton-1].SudokuValue = 0;
+        //clickedFieldButton.SetText(" ");
     }
     public void CheckGameRules()
     {

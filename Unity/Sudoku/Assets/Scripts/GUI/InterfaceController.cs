@@ -33,14 +33,14 @@ public class InterfaceController : MonoBehaviour {
 
     public void SudokuFieldCliecked(SudokuField su)
     {
-        text.text = "You Clicekd [X,Y]: [" + su.x + "," + su.y + "]\n Value: "+su.sudokuValue+"\n Button:"+ su.button.ToString();
+        text.text = "You Clicekd [X,Y]: [" + su.x + "," + su.y + "]\n Value: "+su.SudokuValue+"\n Button:"+ su.button.ToString();
         Debug.Log("Sudoku Fields:"+su.GetType());
         GameController.instance.SetClicked(su);
     }
 
-    public void ClearFieldButt(SudokuField suF)
+    public void ClearFieldButt()
     {
-        gameContoller.ClearField(suF);
+        gameContoller.ClearField();
     }
     public void CheckGameRulesButt()
     {
