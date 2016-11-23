@@ -11,18 +11,6 @@ public class SudokuGenerator : MonoBehaviour {
 
     public static int[,] a = new int[9, 9];
 
-	// Use this for initialization
-	void Start () {
-	    for(int i = 0; i < 9; i++)
-        {
-           // a[i,] = new int[9];
-        }
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     //na podstawie poziomu trundości zwraca nam odpowiednio wygenerowaną planszę
     public static int[][] GenerateSudokuBoard(DifficultLevel diff) {
@@ -67,8 +55,9 @@ public class SudokuGenerator : MonoBehaviour {
         //Striking out
         for (k1 = 0; k1 < 9; k1++)
         {
+            //tu trzeba jakoś przekazywać za dużo
             for (k2 = 0; k2 < 9; k2++)
-                strike_out(k1, k2);
+                strike_out(k1, k2,3);
         }
        // System.out.println();
         for (int i = 0; i < 9; i++)
@@ -120,12 +109,12 @@ public class SudokuGenerator : MonoBehaviour {
         for (int i = 0; i < 3; i++)
         {
             //There are three groups.So we are using for loop three times.
-            k1 = Random.Range(1, 3);
+            k1 = Random.Range(0, max-min+1)+min;
            // k1 = r.nextInt(max - min + 1) + min;
             //This while is just to ensure k1 is not equal to k2.
             do
             {
-                k2 = Random.Range(1, 3);
+                k2 = Random.Range(0, max - min + 1) + min;
                 //k2 = r.nextInt(max - min + 1) + min;
             } while (k1 == k2);
             max += 3; min += 3;
@@ -194,8 +183,9 @@ public class SudokuGenerator : MonoBehaviour {
         }
     }
 
-    public static void strike_out(int k1, int k2)
+    public static void strike_out(int k1, int k2, int maxOut)
     {
+        int maxZ = 0;
         int row_from;
         int row_to;
         int col_from;
@@ -268,9 +258,11 @@ public class SudokuGenerator : MonoBehaviour {
             if (flag == 0)
                 count--;
         }
-        if (count == 1)
+        if (count == 1 && maxZ<maxOut)
         {
             a[k1,k2] = 0;
+            Debug.Log(k1+"  wypad  "+k2);
+            maxZ += 1;
            // counter_num--;
         }
     }

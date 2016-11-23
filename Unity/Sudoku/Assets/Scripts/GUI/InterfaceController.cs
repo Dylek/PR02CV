@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 public class InterfaceController : MonoBehaviour {
 
+    public Text timer;
+    public Text score;
     public Text text;
     private GameController gameContoller;
     // Use this for initialization
@@ -12,9 +14,11 @@ public class InterfaceController : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
-
+    public void setScoreText(int points)
+    {
+        score.text = "Score: " + points;
     }
+
 
     public void ButtonClicked(int xy)
     {

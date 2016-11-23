@@ -8,6 +8,9 @@ public class GameController : MonoBehaviour {
 
     public static GameController instance = null;
     protected Button clickedFieldButton=null;
+    public ScoreController scoreControll;
+    public Timer timer;
+    public InterfaceController interfaceControll;
     private int xButton;
     private int yButtom;
     //private Color pressed = new Color();    
@@ -61,6 +64,7 @@ public class GameController : MonoBehaviour {
 	
 	public void SetButtonNumber(int a)
     {
+        
         Debug.Log("yButtom-xButton:" + (yButtom ) +":"+ (xButton ));
         sudokuBoard[yButtom-1,xButton-1].SetText(a.ToString());
         sudokuBoard[yButtom-1,xButton-1].SudokuValue = a;
@@ -68,7 +72,7 @@ public class GameController : MonoBehaviour {
 
     public void SetClicked(SudokuField sudokuField)
     {
-        
+       
         xButton = sudokuField.x;
         yButtom = sudokuField.y;
 
@@ -85,14 +89,32 @@ public class GameController : MonoBehaviour {
 
     public void ClearField()
     {
+        addScore(-10);
         sudokuBoard[yButtom-1,xButton-1].SudokuValue = 0;
         //clickedFieldButton.SetText(" ");
     }
     public void CheckGameRules()
     {
+        int errors = 0;
         //TODO w kij dużo if'ów
+    
+
+
+        if (errors == 0)
+        {
+            addScore(400);
+            Debug.Log("WIN");
+        }else
+        {
+            addScore(-5*errors);
+            Debug.Log("NOPE");
+        }
     }
 
-
+    private void addScore(int a)
+    {
+        interfaceControll.setScoreText(scoreControll.Score);
+        scoreControll.addScore(a);
+    }
     
 }
