@@ -16,7 +16,7 @@ public class ScoreController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         // wynik po powrocie do gry
-        score = PlayerOptions.PlayerScore;
+        score = MyPlayerSave.PlayerScore;
 	}
 	
 	

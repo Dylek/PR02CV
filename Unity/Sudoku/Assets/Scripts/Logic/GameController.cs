@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour {
     //private Color pressed = new Color();    
     private Color colorBackup=new Color();
     private SudokuField[,] sudokuBoard = new SudokuField[9, 9];
-
+     
     //Robimy singleton
     void Awake(){
         if (instance == null){
@@ -30,9 +30,9 @@ public class GameController : MonoBehaviour {
     void Start () {
         clickedFieldButton = null;
         //TODO zbierz buttony
-        Debug.Log("sudokuBoard[temp.y][temp.x]|:" + sudokuBoard.GetType());
+      //  Debug.Log("sudokuBoard[temp.y][temp.x]|:" + sudokuBoard.GetType());
         GameObject[] buttons = GameObject.FindGameObjectsWithTag("button");
-        Debug.Log(buttons.Length);
+       // Debug.Log(buttons.Length);
         //TODO powsadzaj je w odpowiednie miejsca
         foreach (GameObject obj in buttons)
         {
@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour {
             //SudokuField temp = obj.GetComponent<SudokuField>();
             sudokuBoard[ten.y-1, ten.x-1] = ten;//TU COŚ NIE PYKA
             //Debug.Log("sudokuBoard[ten.y][ten.x]|:" + sudokuBoard.GetType());
-            Debug.Log("sudokuBoard["+ (ten.y - 1) + ","+(ten.x - 1) +"|:" + sudokuBoard[ten.y - 1, ten.x - 1].gameObject.GetInstanceID());
+          //  Debug.Log("sudokuBoard["+ (ten.y - 1) + ","+(ten.x - 1) +"|:" + sudokuBoard[ten.y - 1, ten.x - 1].gameObject.GetInstanceID());
 
         }
         //TODO odpal generowanie sudoku w zależności od poziomu
@@ -60,6 +60,10 @@ public class GameController : MonoBehaviour {
                 sd.button.interactable = false;
             }
         }
+        Debug.Log(MyPlayerSave.PlayerNick);
+        interfaceControll.nick.text = MyPlayerSave.PlayerNick;
+        interfaceControll.timer.text = "Time: " + MyPlayerSave.PlayerTime;
+        interfaceControll.score.text = "Score: " + MyPlayerSave.PlayerScore;
     }
 	
 	public void SetButtonNumber(int a)

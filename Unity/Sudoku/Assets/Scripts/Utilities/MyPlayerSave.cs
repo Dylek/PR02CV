@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public static class PlayerOptions{
-    private static string playerNick;
-    private static int playerScore;
-    private static float playerTime;
-    private static DifficultLevel playerLevel;
-    private static int playerGameType;
+public class MyPlayerSave : MonoBehaviour {
+
+    private static string playerNick="";
+    private static int playerScore=0;
+    private static float playerTime=0;
+    private static DifficultLevel playerLevel=DifficultLevel.easy;
+    private static int playerGameType=0;
+    private static int[] boardValues;
+
 
     public static string PlayerNick
     {
@@ -21,7 +24,7 @@ public static class PlayerOptions{
         }
     }
 
-    public static  int PlayerScore
+    public static int PlayerScore
     {
         get
         {
@@ -73,4 +76,5 @@ public static class PlayerOptions{
         }
     }
 
+   
 }

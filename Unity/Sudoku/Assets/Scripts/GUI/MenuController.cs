@@ -77,11 +77,11 @@ public class MenuController : MonoBehaviour {
             default: diff = DifficultLevel.easy; break;
         }
         Debug.Log("switch ");
-        PlayerOptions.PlayerGameType =(int) gameTypeStuff.GetComponent<Slider>().value;
+        MyPlayerSave.PlayerGameType =(int) gameTypeStuff.GetComponent<Slider>().value;
         Debug.Log("PlayerGameType");
-        PlayerOptions.PlayerNick = nick.GetComponent<InputField>().text;
+        MyPlayerSave.PlayerNick = nick.GetComponent<InputField>().text;
         Debug.Log("PlayerNick");
-        PlayerOptions.PlayerLevel = diff;
+        MyPlayerSave.PlayerLevel = diff;
         Debug.Log("PlayerLevel ");
         SceneManager.LoadScene("sudoku");
 

@@ -6,7 +6,7 @@ public class InterfaceController : MonoBehaviour {
 
     public Text timer;
     public Text score;
-    public Text text;
+    public Text nick;
     private GameController gameContoller;
     // Use this for initialization
     void Start() {
@@ -18,18 +18,7 @@ public class InterfaceController : MonoBehaviour {
     {
         score.text = "Score: " + points;
     }
-
-
-    public void ButtonClicked(int xy)
-    {
-        text.text = "You Clicekd " + xy / 10 + "  " + xy % 10+"\n Value";
-    }
-    public void ButtonClicked2(Button but)
-    {
-        
-
-    }
-
+    
     public void NumberClicked(int a)
     {
         gameContoller.SetButtonNumber(a);
@@ -37,7 +26,7 @@ public class InterfaceController : MonoBehaviour {
 
     public void SudokuFieldCliecked(SudokuField su)
     {
-        text.text = "You Clicekd [X,Y]: [" + su.x + "," + su.y + "]\n Value: "+su.SudokuValue+"\n Button:"+ su.button.ToString();
+        
         Debug.Log("Sudoku Fields:"+su.GetType());
         GameController.instance.SetClicked(su);
     }
