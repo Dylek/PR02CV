@@ -32,7 +32,10 @@ public class SoundController : MonoBehaviour {
         }
 
     }
-
+    public void ButtonClicked()
+    {
+        PlayMyClip(buttonClickedSound);
+    }
   
     public void PlayMyClip(AudioClip clip){
         GetFirstFree().PlayOneShot(clip, 1f);

@@ -26,7 +26,7 @@ public class InterfaceController : MonoBehaviour {
 
     public void SudokuFieldCliecked(SudokuField su)
     {
-        
+        SoundController.instance.ButtonClicked();
         Debug.Log("Sudoku Fields:"+su.GetType());
         GameController.instance.SetClicked(su);
     }

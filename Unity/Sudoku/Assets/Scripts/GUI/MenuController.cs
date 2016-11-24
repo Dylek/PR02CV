@@ -15,6 +15,8 @@ public class MenuController : MonoBehaviour {
     public GameObject diffSlider;
     public GameObject gameTypeStuff;
     public GameObject nick;
+    public GameObject rules;
+    public GameObject scores;
 
 	// Use this for initialization
 	void Start () {
@@ -25,10 +27,7 @@ public class MenuController : MonoBehaviour {
 
     }
 	
-	// Update is called once per frame
-	void Update () {
-	    
-	}
+
 
     public void NewGame()
     {
@@ -87,8 +86,13 @@ public class MenuController : MonoBehaviour {
 
     }
     public void ViewScoresButton(int a) {
+        scores.SetActive(true);
+        ChangeMenu(false);
+
     }
     public void ViewTutorialButton(int a) {
+        rules.SetActive(true);
+        ChangeMenu(false);
         Debug.Log("how to play");
     }
     private void BringInitMenu()
@@ -103,12 +107,22 @@ public class MenuController : MonoBehaviour {
         diffSlider.SetActive(false);
         gameTypeStuff.SetActive(false);
         startButton.SetActive(false);
+        rules.SetActive(false);
+        scores.SetActive(false);
         if (!CheckSave())
         {
             continueButton.GetComponent<Button>().interactable = false;
         }
     }
 
+    private void ChangeMenu(bool state)
+    {
+        newGameButton.SetActive(state);
+        scoresButton.SetActive(state);
+        tutorialButton.SetActive(state);
+        continueButton.SetActive(state);
+        backButton.SetActive(!state);
+    }
     //Sprawdzenie czy w player prefabs jest UnfinishedGame
     private bool CheckSave()
     {

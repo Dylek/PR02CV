@@ -21,13 +21,14 @@ public class SudokuGenerator : MonoBehaviour {
         generate();
         random_gen(1);
         random_gen(0);
+        random_gen(0);
         //System.out.println();
         for (int i = 0; i < 9; i++)
         {
             for (int j = 0; j < 9; j++)
             {
                 //  System.out.print(a[i][j] + "\t");
-                Debug.Log(a[i,j]);
+               // Debug.Log(a[i,j]);
             }
             //  System.out.println("");
          
@@ -105,7 +106,7 @@ public class SudokuGenerator : MonoBehaviour {
     public static void random_gen(int check)
     {
         int k1, k2, max = 2, min = 0;
-        Random r = new Random();
+       // Random r = new Random();
         for (int i = 0; i < 3; i++)
         {
             //There are three groups.So we are using for loop three times.
