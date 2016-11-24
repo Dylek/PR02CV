@@ -8,7 +8,7 @@ public class MyPlayerSave : MonoBehaviour {
     private static float playerTime=0;
     private static DifficultLevel playerLevel=DifficultLevel.easy;
     private static int playerGameType=0;
-    private static int[] boardValues;
+    public static int[] boardValues;
 
 
     public static string PlayerNick

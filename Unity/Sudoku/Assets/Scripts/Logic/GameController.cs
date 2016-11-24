@@ -16,7 +16,9 @@ public class GameController : MonoBehaviour {
     //private Color pressed = new Color();    
     private Color colorBackup=new Color();
     private SudokuField[,] sudokuBoard = new SudokuField[9, 9];
-     
+    private bool toContinue = false; 
+
+
     //Robimy singleton
     void Awake(){
         if (instance == null){
@@ -58,6 +60,7 @@ public class GameController : MonoBehaviour {
             if (a != 0)
             {
                 sd.button.interactable = false;
+                
             }
         }
         Debug.Log(MyPlayerSave.PlayerNick);
@@ -107,12 +110,14 @@ public class GameController : MonoBehaviour {
         if (errors == 0)
         {
             addScore(400);
-            Debug.Log("WIN");
+            Debug.Log("No error");
         }else
         {
             addScore(-5*errors);
             Debug.Log("NOPE");
         }
+
+        //if na zwycięstwo
     }
 
     private void addScore(int a)

@@ -20,6 +20,13 @@ public static class SaveController  {
         }
         MyPlayerSave.PlayerTime = PlayerPrefs.GetFloat("PlayerTime");
         MyPlayerSave.PlayerScore = PlayerPrefs.GetInt("PlayerScore");
+        string str = PlayerPrefs.GetString("PlayerBoad");
+        string[] strT = str.Split(',');
+        MyPlayerSave.boardValues = new int[81];
+        for (int i = 0; i < 81; i++)
+        {
+            MyPlayerSave.boardValues[i] = int.Parse(strT[i]);
+        }
     }
 
     public static void SaveGame()
@@ -31,6 +38,11 @@ public static class SaveController  {
         Debug.Log(MyPlayerSave.PlayerLevel.ToString());
         PlayerPrefs.SetFloat("PlayerTime", MyPlayerSave.PlayerTime);
         PlayerPrefs.SetInt("PlayerScore", MyPlayerSave.PlayerScore);
+        string str = "";
+        for (int i = 0; i < 81; i++)
+        {
+            str = str + "," + MyPlayerSave.boardValues[i];
+        }
     }
 
 
