@@ -23,7 +23,7 @@ public class MenuController : MonoBehaviour {
 
         BringInitMenu();
 
-
+        
 
     }
 	
@@ -127,8 +127,7 @@ public class MenuController : MonoBehaviour {
     private bool CheckSave()
     {
         bool unfinishedGame = false;
-        unfinishedGame = PlayerPrefs.HasKey("unfinishedGame");
-       
+        unfinishedGame = PlayerPrefs.HasKey("unfinishedGame");       
         return unfinishedGame;
     }
 }

@@ -70,9 +70,10 @@
     <Compile Include="Assets\Scripts\Logic\SaveController.cs" />
     <Compile Include="Assets\Scripts\Logic\ScoreController.cs" />
     <Compile Include="Assets\Scripts\Logic\SudokuGenerator.cs" />
+    <Compile Include="Assets\Scripts\Logic\Timer.cs" />
     <Compile Include="Assets\Scripts\SoundModule\SoundController.cs" />
     <Compile Include="Assets\Scripts\Utilities\DoNotDestroyOnLoad.cs" />
-    <Compile Include="Assets\Scripts\Utilities\PlayerOptions.cs" />
+    <Compile Include="Assets\Scripts\Utilities\MyPlayerSave.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

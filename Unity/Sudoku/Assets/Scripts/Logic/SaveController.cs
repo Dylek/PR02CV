@@ -39,6 +39,7 @@ public static class SaveController  {
         PlayerPrefs.SetFloat("PlayerTime", MyPlayerSave.PlayerTime);
         PlayerPrefs.SetInt("PlayerScore", MyPlayerSave.PlayerScore);
         string str = "";
+        //Tu coś nie pyka
         for (int i = 0; i < 81; i++)
         {
             str = str + "," + MyPlayerSave.boardValues[i];

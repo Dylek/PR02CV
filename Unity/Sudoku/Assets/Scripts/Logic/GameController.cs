@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour {
     private Color colorBackup=new Color();
     private SudokuField[,] sudokuBoard = new SudokuField[9, 9];
     private bool toContinue = false;
-    public Text infoText;
+    private bool pouse = false;
 
     //Robimy singleton
     void Awake(){
@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
+        
         clickedFieldButton = null;
       
         GameObject[] buttons = GameObject.FindGameObjectsWithTag("button");    
@@ -58,6 +59,7 @@ public class GameController : MonoBehaviour {
         interfaceControll.nick.text = MyPlayerSave.PlayerNick;
         interfaceControll.timer.text = "Time: " + MyPlayerSave.PlayerTime;
         interfaceControll.score.text = "Score: " + MyPlayerSave.PlayerScore;
+        SoundController.instance.PlayBackground(SoundController.instance.music1);
     }
 	
 	public void SetButtonNumber(int a)
@@ -232,5 +234,16 @@ public class GameController : MonoBehaviour {
     {
 
     }
-    
+
+
+    public void PauseGame()
+    {
+        if (Time.timeScale != 0) { Time.timeScale = 0; pouse = true; }
+        else
+        {
+            Time.timeScale = 1.0f;
+            pouse = false;
+        }      
+    }
+
 }
