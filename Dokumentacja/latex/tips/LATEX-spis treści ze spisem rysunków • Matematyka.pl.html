@@ -1,0 +1,1042 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0036)https://www.matematyka.pl/267193.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pl-pl" xml:lang="pl-pl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--<base href="https://www.matematyka.pl/">--><base href=".">
+<link rel="icon" href="https://www.matematyka.pl/images/pl.gif" type="image/gif">
+<link rel="image_src" href="http://www.matematyka.pl/styles/subsilver2/imageset/site_logo.gif">
+<meta property="og:image" content="http://www.matematyka.pl/styles/subsilver2/imageset/site_logo.gif">
+
+<meta http-equiv="content-language" content="pl-pl">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<link rel="canonical" href="https://www.matematyka.pl/267193.htm">
+<script async="async" defer="defer" src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/xgemius.js"></script><script async="" src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/analytics.js"></script><script type="text/javascript"> var phpBBMobileStyle = false, phpBBMobileVar = 'mobile'; </script><script type="text/javascript" src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/detect.js"></script><style> .mobileDeviceTest { float: left; } @media only screen and (max-device-width: 720px) { .mobileDeviceTest { float: right; } } @media only screen and (max-device-height: 720px) { .mobileDeviceTest { float: right; } } </style>
+<title>LATEX-spis treści ze spisem rysunków • Matematyka.pl </title>
+
+	<link rel="alternate" type="application/atom+xml" title="Kanał - Matematyka.pl" href="https://www.matematyka.pl/feed.php">
+	<link rel="alternate" type="application/atom+xml" title="Kanał - Wszystkie działy" href="https://www.matematyka.pl/feed.php?mode=forums">
+	<link rel="alternate" type="application/atom+xml" title="Kanał - Dział - Programy matematyczne" href="https://www.matematyka.pl/feed.php?f=77">
+	<link rel="alternate" type="application/atom+xml" title="Kanał - Temat - LATEX-spis treści ze spisem rysunków" href="https://www.matematyka.pl/feed.php?f=77&amp;t=267193">
+
+<link rel="stylesheet" href="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/stylesheet.css" type="text/css">
+<!--[if IE 6]>
+        	<link rel="stylesheet" type="text/css" href="./styles/subsilver2/theme/ie6.css" />
+<![endif]-->
+<script type="text/javascript" src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/jquery.min.js"></script>
+<script type="text/javascript" src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/editor.js"></script>
+<script type="text/javascript" src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/LaTeXConvert.js"></script>
+<script type="text/javascript" src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/hidecontent.js"></script>
+
+<script type="text/javascript">
+// <![CDATA[
+
+
+var cname = 'podobnetematy';
+var cpath = '/';
+var cdomain = 'matematyka.pl';
+var csecure = '0';
+
+function popup(url, width, height, name)
+{
+	if (!name)
+	{
+		name = '_popup';
+	}
+
+	//window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes,width=' + width);
+	return false;
+}
+
+// www.phpBB-SEO.com SEO TOOLKIT BEGIN
+function jumpto() {
+	var page = prompt('Wprowadź numer strony, do której chcesz przejść.:', '1');
+	var per_page = '';
+	var base_url = '';
+	if (page !== null && !isNaN(page) && page == Math.floor(page) && page > 0)
+	{
+		if (base_url.indexOf('?') == -1)
+		{
+			document.location.href = base_url + '?start=' + ((page - 1) * per_page);
+		}
+		else
+		{
+			document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * per_page);
+		}
+	}
+}
+// www.phpBB-SEO.com SEO TOOLKIT END
+
+/**
+* Find a member
+*/
+function find_username(url)
+{
+	popup(url, 760, 570, '_usersearch');
+	return false;
+}
+
+/**
+* Mark/unmark checklist
+* id = ID of parent container, name = name prefix, state = state [true/false]
+*/
+function marklist(id, name, state)
+{
+	var parent = document.getElementById(id);
+	if (!parent)
+	{
+		eval('parent = document.' + id);
+	}
+
+	if (!parent)
+	{
+		return;
+	}
+
+	var rb = parent.getElementsByTagName('input');
+	
+	for (var r = 0; r < rb.length; r++)
+	{
+		if (rb[r].name.substr(0, name.length) == name)
+		{
+			rb[r].checked = state;
+		}
+	}
+}
+
+
+
+function ShowLatexCode(text, x, y, action, userid) {
+      $('#latexBox').css("margin-top",  y + "px");
+	  $('#latexBox').css("margin-left", (x - 100) + "px");
+      $('#latexBox').fadeIn('fast');
+      $('#latexSrc').text(text.title);
+  }
+  function CloseLatexCode() {
+      $('#latexBox').fadeOut('fast');
+  }
+
+
+
+function substr_count($h, $n) {
+   var il=0;
+   for (var i=0;i<$h.length;i++) {
+      if ($n == $h.substr(i, $n.length)) il++;
+   }
+   return il;
+}
+
+function stripHTML(html, el) {
+   $(el).html(html);
+   return $(el).text();
+}
+
+var lt_brace = {};
+
+
+
+$(document).ready(function(){
+
+	$('body').click(function(){
+		CloseLatexCode();
+	});
+	$('#latexBox').click(function(e) {
+		e.stopPropagation();
+	});
+	$('img.latex').click(function(e) {
+		e.stopPropagation();
+		ShowLatexCode(this, e.pageX, e.pageY);
+	});
+	$(document).keypress(function(e){
+	if(e.keyCode==27){
+		CloseLatexCode();
+	}
+	});
+	
+	$('.forum_login_form').submit(fillLocals);
+
+	//popular tags
+	$('.topic-tag-add').click(function() {
+		var atitle = $('#subject').val();
+		var pos = atitle.lastIndexOf(']');
+		$('#subject').val(atitle.slice(0,pos+1)+'['+$(this).text()+']'+atitle.slice(pos+1));
+		return false;
+	});
+
+	var postSubmited = false;
+	$('input[name="post"]').bind('click', function() {
+		if(postSubmited) return false;
+		postSubmited=true;
+		$(this).css('color', '#777').css('cursor', 'progress');
+	});
+	
+	window.setInterval(refreshEditStatus, 10*60*1000);
+	
+
+	
+	$('textarea[name=message]').keyup(quickTag);
+	//mod7 adds 
+	var mod7_adds_out = '';
+	for(i in bbcode_tag_list) {
+		mod7_adds_out += '<input type="checkbox" checked="checked" name="mod7-'+bbcode_tag_list[i]+'" id="mod7-'+bbcode_tag_list[i]+'" /> '+bbcode_tag_list[i]+' ';
+	}
+	mod7_adds_out += '<br /><input class="btnbbcode mod-button" value="Usuń" onclick="mod_button(7)" type="button" />';
+
+	$('#mod7-adds').html(mod7_adds_out);
+	mod7_adds_out = '';
+
+$('body').append('<div id="_strip_html"></div>');
+var code_pid = 0;
+var _s_el=$('#_strip_html');
+$(_s_el).css('display', 'none');
+
+$('.codetitle + .codecontent').each(function (index, domEle) {
+	var cnt = $(domEle).next();
+	code_pid++;
+	$(cnt).attr('id', 'code-block-'+code_pid);
+	$(domEle).prev().attr('id', 'code-title-'+code_pid);
+	$(cnt).css({'margin-left': '39px', 'border-left': '1px solid white'});
+	$(cnt).after('<div style="border-top: 1px solid #A9B8C2; margin: -11px 5px 10px; height: 1px;"></div>');
+
+	var lines = $(cnt).html().replace(/<BR>/gi, '<br>').split('<br>');
+	var _cWidth = 7; //szerokość znaku w px
+	//szerokosc elemntu
+	var _bWidth = parseInt($(cnt).width());
+	if(_bWidth < 1) { _bWidth = 770; }
+	var _cByLine = parseInt(_bWidth / _cWidth)+1;
+	var counter='';
+	//poprawa dla ostatniej lini
+	var _subb = 0;
+	if(lines[lines.length-1]=='') {
+		_subb = 1;
+	}
+	for(var j=0;j<lines.length-_subb;j++) {
+		counter+=''+(j+1);
+		_brs = parseInt(stripHTML(lines[j],_s_el).replace(/<&#91;^>&#93;*>/g, "").length/_cByLine);
+		for (var i=0;i<=_brs;i++) {
+			counter+=''+'<br>';
+		}
+	}
+	$(domEle).html(counter);
+	});
+	colorBar('#color-bar');
+});
+
+// ]]>
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58458999-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- (C)2000-2013 Gemius SA - gemiusAudience / pp.matematyka.pl / podstrony -->
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var pp_gemius_identifier = 'zItKuHvjz2ASBFoOXevv0PTXHUddXGOCBmi1T7ET9In.t7';
+// lines below shouldn't be edited
+function gemius_pending(i) { window[i] = window[i] || function() {var x = window[i+'_pdata'] = window[i+'_pdata'] || []; x[x.length]=arguments;};};
+gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event');
+(function(d,t) {try {var gt=d.createElement(t),s=d.getElementsByTagName(t)[0],l='http'+((location.protocol=='https:')?'s':''); gt.setAttribute('async','async');
+gt.setAttribute('defer','defer'); gt.src=l+'://gapl.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt,s);} catch (e) {}})(document,'script');
+//--><!]]>
+</script>
+</head>
+<body class="ltr">
+
+<a name="top"></a>
+
+<div id="latexBox" style="display: none;">
+	<code id="latexSrc"></code><br><br>
+	<span style="cursor: pointer;" onclick="CloseLatexCode()">Zamknij [Esc]</span>
+</div>
+
+<div id="wrapheader">
+	<a href="https://www.matematyka.pl/" title="Matematyka.pl" style="display: block; width: 308px; height: 60px; position: absolute; left: 14px; top: 14px;"></a>
+	<div id="logodesc">
+	</div>
+	<div id="mysbar">
+		<form action="https://www.matematyka.pl/search.php" method="post">
+		<input class="text" type="text" onfocus="this.value=&#39;&#39;;" name="keywords" value="Znajdz rozwiazanie">
+		<input class="submit" type="submit" value="Szukaj">
+		</form>
+		<br><a style="margin-left: 130px; color: #D46400" href="https://www.matematyka.pl/search.htm?sid=09752fdb886ea7cd09bb68e9b58840eb">szukanie&nbsp;zaawansowane</a>
+	</div>
+
+	<!--  menu -->
+
+	<div id="netstel_menu" class="typeface-js">
+	<ul>
+		<li class="active">
+			<a href="https://www.matematyka.pl/" class="active" id="li_forum">Forum</a>
+		</li>
+		<li class="line">
+			<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/n_menu_line.jpg" width="2" height="30" alt="">
+		</li>
+		<li>
+			<a href="https://www.matematyka.pl/page.php?p=aktualnosci" title="Aktualności" class="" id="li_kalkulator">Aktualności</a>
+		</li>
+		<li class="line">
+			<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/n_menu_line.jpg" width="2" height="30" alt="">
+		</li>
+		<li class="">
+			<a href="https://www.matematyka.pl/page.php?p=matura-informacje-ogolne" title="matura" class="" id="li_matura">Matura</a>
+		</li>
+		<li class="line">
+			<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/n_menu_line.jpg" width="2" height="30" alt="">
+		</li>
+		<li class="">
+			<a href="https://www.matematyka.pl/page.php?p=kompendium-liczby" title="kompedium" class="" id="li_kompendium">Kompendium</a>
+		</li>
+		<li class="line">
+			<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/n_menu_line.jpg" width="2" height="30" alt="">
+		</li>
+		<li class="line">
+			<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/n_menu_line.jpg" width="2" height="30" alt="">
+		</li>
+		<li class="">
+			<a href="https://www.matematyka.pl/latex.htm" class="" id="li_latex"><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span></a>
+		</li>
+		<li class="line">
+			<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/n_menu_line.jpg" width="2" height="30" alt="">
+		</li>
+		<li class="">
+			<a href="https://www.matematyka.pl/regulamin.htm" class="" id="li_regulamin">Regulamin</a>
+		</li>
+		<li class="line">
+			<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/n_menu_line.jpg" width="2" height="30" alt="">
+		</li>
+		<li class="">
+			<a href="https://www.matematyka.pl/poradnik.htm" class="" id="li_poradnik">Poradnik</a>
+		</li>
+		<li class="line">
+			<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/n_menu_line.jpg" width="2" height="30" alt="">
+		</li>
+		<li class="">
+			<a href="https://www.matematyka.pl/forum185.htm" class="" id="li_rozwiazania_zadan">Rozwiązania zadań</a>
+		</li>
+		<li class="line">
+			<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/n_menu_line.jpg" width="2" height="30" alt="">
+		</li>
+		<li class="line">
+			<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/n_menu_line.jpg" width="2" height="30" alt="">
+		</li>
+		<li class="">
+			<a href="https://www.matematyka.pl/multimedia.html" target="_blank" title="Multimedia" class="" id="li_multimedia">Multimedia</a>
+		</li>
+		<li class="line">
+			<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/n_menu_line.jpg" width="2" height="30" alt="">
+		</li>
+		<li>
+			<a href="http://www.facebook.com/MatematykaPL" target="_blank" title="Facebook" id="li_facebook">Facebook</a>
+		</li>
+		<li class="line">
+			<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/n_menu_line.jpg" width="2" height="30" alt="">
+		</li>
+	</ul>
+	</div>
+
+	<!-- koniec menu -->
+	<div id="menubar" style="position: absolute; top: 0; width: 620px;">
+		<table width="100%" cellspacing="0">
+		<tbody><tr>
+			<td class="genmed" style="">
+				
+			</td>
+			<td class="genmed" align="right">
+				<!--<a href="./poradnik.htm" style="color: orange !important; font-weight: Bold;">Poradnik</a>-->
+				&nbsp; &nbsp; &nbsp; <a href="https://www.matematyka.pl/ucp.php?mode=login&amp;sid=09752fdb886ea7cd09bb68e9b58840eb"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_mini_login.gif" width="12" height="13" alt="*"> Zaloguj</a>&nbsp;&nbsp; &nbsp; &nbsp;<a href="https://www.matematyka.pl/ucp.php?mode=register&amp;sid=09752fdb886ea7cd09bb68e9b58840eb"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_mini_register.gif" width="12" height="13" alt="*"> Zarejestruj</a>
+				
+			</td>
+		</tr>
+		</tbody></table>
+	</div>
+</div>
+<div id="wrapcentre">
+<table class="tablebg" width="100%" cellspacing="1" cellpadding="0" style="margin-top: 5px;">
+	<tbody><tr>
+		<td class="row1" style="background: none; border-bottom: 1px Solid #ECECEC;">
+			<p class="breadcrumbs"><a href="https://www.matematyka.pl/">Strona główna Matematyka.pl</a> » <a href="https://www.matematyka.pl/forum166.htm">Matematyka wczoraj i dziś</a> » <a href="https://www.matematyka.pl/forum77.htm">Programy matematyczne</a></p>
+			<!-- p class="datetime">Wszystkie czasy w strefie UTC + 1 [<abbr title="Daylight Saving Time">czas letni (DST)</abbr>]</p -->
+		</td>
+	</tr>
+	</tbody></table>
+
+<div id="pageheader">
+	<h1><a class="titles" href="https://www.matematyka.pl/267193.htm">LATEX-spis treści ze spisem rysunków</a></h1>
+
+
+</div>
+
+
+<div style="text-align: center;margin:5px 0 0 0;padding:0;">
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:750px;height:300px" data-ad-client="ca-pub-0148455278558378" data-ad-slot="7315884840"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div id="pagecontent">
+
+	<table width="100%" cellspacing="1">
+	<tbody><tr>
+
+			<td class="nav" valign="middle" nowrap="nowrap">&nbsp;Strona <strong>1</strong> z <strong>1</strong><br></td>
+			<td class="gensmall" nowrap="nowrap">&nbsp;[ Posty: 5 ]&nbsp;</td>
+			<td class="gensmall" width="100%" align="right" nowrap="nowrap"></td>
+		
+	</tr>
+	</tbody></table>
+<span id="intertext1">
+	<table class="tablebg" width="100%" cellspacing="1">
+
+
+	</table>
+
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	
+		<tbody><tr>
+			<th>Autor</th>
+			<th>Wiadomość</th>
+		</tr>
+	<tr class="row1 ">
+
+			<td align="center" valign="middle" style="background-color: #c3d3e4;">
+				<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/gender_3.gif" alt="Kobieta" title="Kobieta" style="float: left;">
+				<a name="p4797546"></a>
+				<b class="postauthor" style="color:#2259A3">ewa_123</b>
+			
+				<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_user_offline.gif" alt="Offline" title="Offline">
+			
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tbody><tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Tytuł:</b> <a href="https://www.matematyka.pl/267193.htm#p4797546">LATEX-spis treści ze spisem rysunków</a></div><div style="float: right;"><a href="https://www.matematyka.pl/267193.htm#p4797546"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_post_target.gif" width="12" height="9" alt="Post" title="Post"></a><b>Napisane:</b> 23 paź 2011, o 03:24&nbsp;</div></td>
+				</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		
+		<tr class="row1 ">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tbody><tr>
+					<td style="text-align: center;"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/rank_5.gif" alt="Użytkownik" title="Użytkownik"></td>
+				</tr>
+			
+				<!-- <tr>
+					<td class="postdetails">Użytkownik</td>
+				</tr> -->
+			
+				</tbody></table>
+
+				<span class="postdetails">
+<br><b>Posty:</b> 32<br><b>Lokalizacja:</b> zielona góra
+
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tbody><tr>
+					<td>
+					
+<div class="postbody">
+Witam,<br><br>Chciałabym aby w spisie treści był  podpunkt "spis tabel" i "spis rysunków"<br><br>W pracy użyłam  polecenia <br><div class="codetitle"><b>Kod:</b></div><div style="width: 2em; float: left; margin-left: 5px; background-color: #eee; text-align: right;" class="codecontent">1<br></div><div style="" class="codecontent">\tableofcontents </div><br><br>Polecenie to daje mi tylko rozdziały.<br>Z góry dziękuje za pomoc.
+<div style="text-align:left;padding-top:8px;border-top:1px solid #FFFFFF;margin-top:10px;">
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-0148455278558378" data-ad-slot="4343582044"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+
+
+
+
+
+						<table width="100%" cellspacing="0">
+						<tbody><tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				</tbody></table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="https://www.matematyka.pl/#wrapheader">Góra</a></strong></td>
+			<td></td>
+	
+		</tr>
+
+	<tr>
+
+		<td class="spacer" colspan="2"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/spacer.gif" alt="">
+
+		</td>
+	</tr>
+	</tbody></table>
+		
+	
+	
+
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tbody><tr class="row2 ">
+
+			<td align="center" valign="middle" style="background-color: #c3d3e4;">
+				<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/gender_2.gif" alt="Mężczyzna" title="Mężczyzna" style="float: left;">
+				<a name="p4797549"></a>
+				<b class="postauthor" style="color: #063B65">szw1710</b>
+			
+				<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_user_offline.gif" alt="Offline" title="Offline">
+			
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tbody><tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Tytuł:</b> <a href="https://www.matematyka.pl/267193.htm#p4797549">LATEX-spis treści ze spisem rysunków</a></div><div style="float: right;"><a href="https://www.matematyka.pl/267193.htm#p4797549"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_post_target.gif" width="12" height="9" alt="Post" title="Post"></a><b>Napisane:</b> 23 paź 2011, o 08:17&nbsp;</div></td>
+				</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		
+		<tr class="row2 ">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tbody><tr>
+					<td style="text-align: center;"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/rank_gs.gif" alt="Gość Specjalny" title="Gość Specjalny"></td>
+				</tr>
+			
+				<tr>
+					<td style="text-align: center;"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/file.php" width="120" height="49" alt="Avatar użytkownika"></td>
+				</tr>
+			
+				<!-- <tr>
+					<td class="postdetails">Gość Specjalny</td>
+				</tr> -->
+			
+				</tbody></table>
+
+				<span class="postdetails">
+<br><b>Posty:</b> 16612<br><b>Lokalizacja:</b> Cieszyn
+
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tbody><tr>
+					<td>
+					
+<div class="postbody">
+<div class="codetitle"><b>Kod:</b></div><div style="width: 2em; float: left; margin-left: 5px; background-color: #eee; text-align: right;" class="codecontent">1<br>2<br></div><div style="" class="codecontent">\listoffigures<br>\listoftables</div>
+
+</div>
+
+
+
+
+
+						<table width="100%" cellspacing="0">
+						<tbody><tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				</tbody></table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td class="profile"><strong><a href="https://www.matematyka.pl/#wrapheader">Góra</a></strong></td>
+			<td></td>
+	
+		</tr>
+
+	<tr>
+
+		<td class="spacer" colspan="2"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/spacer.gif" alt="">
+
+		</td>
+	</tr>
+	</tbody></table>
+		
+	
+	
+
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tbody><tr class="row1 ">
+
+			<td align="center" valign="middle" style="background-color: #c3d3e4;">
+				<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/gender_3.gif" alt="Kobieta" title="Kobieta" style="float: left;">
+				<a name="p4797802"></a>
+				<b class="postauthor" style="color:#2259A3">ewa_123</b>
+			
+				<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_user_offline.gif" alt="Offline" title="Offline">
+			
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tbody><tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Tytuł:</b> <a href="https://www.matematyka.pl/267193.htm#p4797802">LATEX-spis treści ze spisem rysunków</a></div><div style="float: right;"><a href="https://www.matematyka.pl/267193.htm#p4797802"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_post_target.gif" width="12" height="9" alt="Post" title="Post"></a><b>Napisane:</b> 23 paź 2011, o 14:21&nbsp;</div></td>
+				</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		
+		<tr class="row1 ">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tbody><tr>
+					<td style="text-align: center;"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/rank_5.gif" alt="Użytkownik" title="Użytkownik"></td>
+				</tr>
+			
+				<!-- <tr>
+					<td class="postdetails">Użytkownik</td>
+				</tr> -->
+			
+				</tbody></table>
+
+				<span class="postdetails">
+<br><b>Posty:</b> 32<br><b>Lokalizacja:</b> zielona góra
+
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tbody><tr>
+					<td>
+					
+<div class="postbody">
+Niestety nie o to mi chodziło.<br> Mianowicie, na stronie 40 mam spis tabel i chciałabym aby taka informacja pojawiła się w spisie treści.  Chciałabym aby spis treści wyglądał tak:<br><br><div class="codetitle"><b>Kod:</b></div><div style="width: 2em; float: left; margin-left: 5px; background-color: #eee; text-align: right;" class="codecontent">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br></div><div style="" class="codecontent">Spis treści<br>1. Rozdział 1................................3<br>2. Rozdział 2.................................10<br>.<br>.<br>.<br>Spis tabel.........................................40<br></div>
+
+</div>
+
+
+
+
+
+						<table width="100%" cellspacing="0">
+						<tbody><tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				</tbody></table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="https://www.matematyka.pl/#wrapheader">Góra</a></strong></td>
+			<td></td>
+	
+		</tr>
+
+	<tr>
+
+		<td class="spacer" colspan="2"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/spacer.gif" alt="">
+
+		</td>
+	</tr>
+	</tbody></table>
+		
+	
+	
+
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tbody><tr class="row2 ">
+
+			<td align="center" valign="middle" style="background-color: #c3d3e4;">
+				<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/gender_2.gif" alt="Mężczyzna" title="Mężczyzna" style="float: left;">
+				<a name="p4797816"></a>
+				<b class="postauthor" style="color: #063B65">luka52</b>
+			
+				<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_user_online.gif" alt="Online" title="Online">
+			
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tbody><tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Tytuł:</b> <a href="https://www.matematyka.pl/267193.htm#p4797816">LATEX-spis treści ze spisem rysunków</a></div><div style="float: right;"><a href="https://www.matematyka.pl/267193.htm#p4797816"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_post_target.gif" width="12" height="9" alt="Post" title="Post"></a><b>Napisane:</b> 23 paź 2011, o 14:36&nbsp;</div></td>
+				</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		
+		<tr class="row2 ">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tbody><tr>
+					<td style="text-align: center;"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/rank_gs.gif" alt="Gość Specjalny" title="Gość Specjalny"></td>
+				</tr>
+			
+				<!-- <tr>
+					<td class="postdetails">Gość Specjalny</td>
+				</tr> -->
+			
+				</tbody></table>
+
+				<span class="postdetails">
+<br><b>Posty:</b> 8592<br><b>Lokalizacja:</b> Kraków
+
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tbody><tr>
+					<td>
+					
+<div class="postbody">
+<div class="codetitle"><b>Kod:</b></div><div style="width: 2em; float: left; margin-left: 5px; background-color: #eee; text-align: right;" class="codecontent">1<br>2<br></div><div style="" class="codecontent">\listoffigures<br>\addcontentsline{toc}{section}{Spis rysunków}</div>
+
+</div>
+
+
+
+
+
+						<table width="100%" cellspacing="0">
+						<tbody><tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				</tbody></table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td class="profile"><strong><a href="https://www.matematyka.pl/#wrapheader">Góra</a></strong></td>
+			<td></td>
+	
+		</tr>
+
+	<tr>
+
+		<td class="spacer" colspan="2"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/spacer.gif" alt="">
+
+		</td>
+	</tr>
+	</tbody></table>
+		
+	
+	
+
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tbody><tr class="row1 ">
+
+			<td align="center" valign="middle" style="background-color: #c3d3e4;">
+				<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/gender_3.gif" alt="Kobieta" title="Kobieta" style="float: left;">
+				<a name="p4798405"></a>
+				<b class="postauthor" style="color:#2259A3">ewa_123</b>
+			
+				<img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_user_offline.gif" alt="Offline" title="Offline">
+			
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tbody><tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Tytuł:</b> <a href="https://www.matematyka.pl/267193.htm#p4798405">LATEX-spis treści ze spisem rysunków</a></div><div style="float: right;"><a href="https://www.matematyka.pl/267193.htm#p4798405"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_post_target.gif" width="12" height="9" alt="Post" title="Post"></a><b>Napisane:</b> 23 paź 2011, o 20:56&nbsp;</div></td>
+				</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		
+		<tr class="row1 ">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tbody><tr>
+					<td style="text-align: center;"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/rank_5.gif" alt="Użytkownik" title="Użytkownik"></td>
+				</tr>
+			
+				<!-- <tr>
+					<td class="postdetails">Użytkownik</td>
+				</tr> -->
+			
+				</tbody></table>
+
+				<span class="postdetails">
+<br><b>Posty:</b> 32<br><b>Lokalizacja:</b> zielona góra
+
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tbody><tr>
+					<td>
+					
+<div class="postbody">
+Dziękuje <img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_smile.gif" alt=":)" title="">
+
+</div>
+
+
+
+
+
+						<table width="100%" cellspacing="0">
+						<tbody><tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				</tbody></table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="https://www.matematyka.pl/#wrapheader">Góra</a></strong></td>
+			<td></td>
+	
+		</tr>
+
+	<tr>
+
+		<td class="spacer" colspan="2"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/spacer.gif" alt="">
+
+		</td>
+	</tr>
+	</tbody></table>
+		
+	
+	
+
+
+<table cellspacing="1" width="100%" class="tablebg">
+            <tbody>
+                <tr class="row1">
+                    <td valign="top">
+                        <table cellspacing="5" width="100%">
+                            <tbody><tr>
+                                    <td>
+
+                                        <div class="postbody">
+<div style="margin:0 auto;text-align:center;padding:2px 0 10px 0;">
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-0148455278558378" data-ad-slot="3605949065"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="1" colspan="2" class="spacer"><img height="1" width="1" alt="" src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/spacer.gif"></td>
+                </tr>
+            </tbody>
+        </table>
+
+<table style="width:100%;">
+	<tbody><tr>
+		<td class="cat">
+			<table width="100%" cellspacing="0">
+			<tbody><tr>
+				<td class="nav" align="right" nowrap="nowrap"><a href="https://www.matematyka.pl/266821.htm">Poprzedni</a> | <a href="https://www.matematyka.pl/267713.htm">Następny</a>&nbsp;</td>
+			</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+</span>
+	<table width="100%" cellspacing="1">
+	<tbody><tr>
+		<td align="left" valign="middle" nowrap="nowrap">
+		<a href="https://www.matematyka.pl/posting.php?mode=post&amp;f=77&amp;sid=09752fdb886ea7cd09bb68e9b58840eb"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/button_topic_new.gif" alt="Utwórz nowy temat" title="Utwórz nowy temat"></a>&nbsp;<a href="https://www.matematyka.pl/posting.php?mode=reply&amp;f=77&amp;t=267193&amp;sid=09752fdb886ea7cd09bb68e9b58840eb"><img src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/button_topic_reply.gif" alt="Odpowiedz w temacie" title="Odpowiedz w temacie"></a>
+		</td>
+		
+			<td class="nav" valign="middle" nowrap="nowrap">&nbsp;Strona <strong>1</strong> z <strong>1</strong><br></td>
+			<td class="gensmall" nowrap="nowrap">&nbsp;[ Posty: 5 ]&nbsp;</td>
+			<td class="gensmall" width="100%" align="right" nowrap="nowrap">
+
+                            
+                        </td>
+		
+	</tr>
+	<tr>
+	<td></td>
+	<td align="left" valign="middle" nowrap="nowrap" colspan="3">
+    <style type="text/css">
+      a.add-link{
+         color: red; font-weight: bold; text-decoration: underline; font-size: 114%;
+      }
+      a.add-link:hover {
+        text-decoration: none;
+      }
+    </style>
+</td>
+	</tr>
+	</tbody></table>
+
+<div id="pagefooter"></div>
+
+<br clear="all">
+
+<table width="100%" cellspacing="1"> <!-- luka52: narzedzia szybkiego moderowania -->
+<tbody><tr>
+	<td width="40%" valign="top" nowrap="nowrap" align="left"></td>
+</tr>
+</tbody></table>
+
+<table class="tablebg" width="100%" cellspacing="1" cellpadding="0" style="margin-top: 5px;">
+	<tbody><tr>
+		<td class="row1" style="background: none; border-bottom: 1px Solid #ECECEC;">
+			<p class="breadcrumbs"><a href="https://www.matematyka.pl/">Strona główna Matematyka.pl</a> » <a href="https://www.matematyka.pl/forum166.htm">Matematyka wczoraj i dziś</a> » <a href="https://www.matematyka.pl/forum77.htm">Programy matematyczne</a></p>
+			<!-- p class="datetime">Wszystkie czasy w strefie UTC + 1 [<abbr title="Daylight Saving Time">czas letni (DST)</abbr>]</p -->
+		</td>
+	</tr>
+	</tbody></table>
+<br clear="all">
+   <table class="tablebg" width="100%" cellspacing="1">
+   <!--<table class="tablebg" width="100%" cellspacing="1" >-->
+   <tbody><tr>
+	 <th colspan="4" align="left">&nbsp;Zobacz podobne tematy</th>
+   </tr>
+   <tr>
+	  <td class="cat">&nbsp;Tytuł tematu&nbsp;</td>
+	  
+	  <td class="cat">&nbsp;Autor&nbsp;</td>
+	  <td class="cat">&nbsp;Odpowiedzi&nbsp;</td>
+   </tr>
+			
+   <tr>
+			<td nowrap="nowrap" class="row1">&nbsp;<a href="https://www.matematyka.pl/229304.htm?sid=09752fdb886ea7cd09bb68e9b58840eb" class="topictitle">Numerowanie wzorów w latex</a></td>
+			
+			<td class="row1">&nbsp;Hiro91</td>
+			<td class="row1">&nbsp;4</td>
+   </tr>
+			
+   <tr>
+			<td nowrap="nowrap" class="row1">&nbsp;<a href="https://www.matematyka.pl/329485.htm?sid=09752fdb886ea7cd09bb68e9b58840eb" class="topictitle">latex prezentacje w beamer'ze</a></td>
+			
+			<td class="row1">&nbsp;pw1822</td>
+			<td class="row1">&nbsp;8</td>
+   </tr>
+			
+   <tr>
+			<td nowrap="nowrap" class="row1">&nbsp;<a href="https://www.matematyka.pl/360469.htm?sid=09752fdb886ea7cd09bb68e9b58840eb" class="topictitle">Latex zmiana tytułów rozdziałów</a></td>
+			
+			<td class="row1">&nbsp;Alosha</td>
+			<td class="row1">&nbsp;0</td>
+   </tr>
+			
+   <tr>
+			<td nowrap="nowrap" class="row1">&nbsp;<a href="https://www.matematyka.pl/387318.htm?sid=09752fdb886ea7cd09bb68e9b58840eb" class="topictitle">[Latex] warunki pod max, min, inf, sup</a></td>
+			
+			<td class="row1">&nbsp;joanna1234</td>
+			<td class="row1">&nbsp;2</td>
+   </tr>
+			
+   <tr>
+			<td nowrap="nowrap" class="row1">&nbsp;<a href="https://www.matematyka.pl/303214.htm?sid=09752fdb886ea7cd09bb68e9b58840eb" class="topictitle">Latex- nowy styl nagłówka</a></td>
+			
+			<td class="row1">&nbsp;k100pa</td>
+			<td class="row1">&nbsp;1</td>
+   </tr>
+			
+</tbody></table>
+
+</div>
+
+<div id="wrapfooter" style="overflow: hidden;">
+    <div style="padding: 10px 10px; margin-top: 10px; border-top: 1px Solid #eeeeee;">
+		<div style="float: left; height: 15px; width: 100%;">
+
+			<div style="text-align: left! important; margin-bottom: 12px">
+&nbsp;
+			</div>
+			<div style="clear: both;"></div>
+
+			<a href="https://www.matematyka.pl/feed.php" title="Kanał Atom"><img style="vertical-align: middle;" src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/icon_rss.gif" width="14" height="14" alt="Atom"></a>
+			[<a href="https://www.matematyka.pl/regulamin.htm" style="color: indianred;">Regulamin Forum</a>]
+			[<a href="https://www.matematyka.pl/latex.htm" style="color: indianred;">Instrukcja <b>LaTeX-a</b></a>]
+			[<a href="https://www.matematyka.pl/poradnik.htm" style="color: indianred;">Poradnik</a>]
+                        [<a href="https://www.matematyka.pl/378441.htm" style="color: indianred;">F.A.Q.</a>]
+			[<a href="https://www.matematyka.pl/reklama.htm" style="color: green;">Reklama</a>]
+			[<a href="https://www.matematyka.pl/kontakt.htm" style="color: green;">Kontakt</a>]
+			
+			<div style="float: right; height: 15px;">
+				Copyright (C) <a href="http://www.pararent.com/">ParaRent.com</a>
+			</div>
+
+
+<div class="serwisy">
+<ul>
+<li>Nasze serwisy:</li>
+<li><a href="http://forumprawne.org/">ForumPrawne.org</a></li>
+<li><a href="http://www.poradaprawna.pl/">PoradaPrawna.pl</a></li>
+<li><a href="http://www.kredytforum.pl/">KredytForum.pl</a></li>
+<li><a href="http://www.biolog.pl/">Biolog.pl</a></li></ul>
+</div>
+
+		</div>
+
+	</div>
+	<div style="text-align: left; clear: both; padding: 5px 5px;">
+	</div>
+
+	
+<br>
+<div style="text-align: left; font-size: 0.9em; padding: 5px 5px; height: 15px;">
+</div>
+</div>
+<!--	Forum jest oparte o skrypt phpBB Group : 2006 //-->
+<script type="text/javascript" src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/whcookies.js"></script>
+
+</div><iframe id="gemius_hcconn_1470252559828_84997532" name="lsgetframe" width="0" height="0" scrolling="no" src="./LATEX-spis treści ze spisem rysunków • Matematyka.pl_files/lsget.html" style="display: none; visibility: hidden;"></iframe><div id="cookies-message-container"><style>.cookemessage{cursor:pointer;position:fixed;width:100%;height: 44px;margin:0 auto;font-family:arial;font-size:12px;bottom: 0;z-index: 1000000;color: #ffffff;}.cookemessage:hover{color: #ffffff;}.cookemessage a{text-decoration:underline;color: #ffffff;}.cookemessage:hover a{color: #ffffff;}.cookemessagecloseico{background: transparent url("http://www.matematyka.pl/close2.png") 0px 0px no-repeat; width:	102px;height:	36px;position:absolute;top:	4px;right:	5px}.cookemessagecloseico:hover{}.opacityholder {position: relative;}.opacitybox {position: absolute;background: black;width: 100%;height: 100%;opacity: 0.8;filter: alpha(opacity = 80);}.cookemessagetext {position: relative;width: 935px;margin: auto;text-align: left;padding: 15px 0;}.cookemessagetext .bold {font-weight: bold;}</style><div id="cookemessagehandler" class="cookemessage" onclick="javascript:WHCloseCookiesWindow();"><div id="opacityholder"><div class="opacitybox"></div><div class="cookemessagetext"><span>Na stronie używamy cookies. Korzystanie z witryny oznacza zgodę na ich wykorzystywanie.</span><span>Szczegóły znajdziesz w</span> <a href="https://www.matematyka.pl/regulamin.htm">Regulaminie.</a><div class="cookemessagecloseico"></div></div></div></div></div></body></html>

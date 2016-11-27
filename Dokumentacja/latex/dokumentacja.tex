@@ -1,0 +1,183 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[polish]{babel}
+\usepackage[MeX]{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{times}
+\usepackage{graphicx,wrapfig}
+%\usepackage{anysize}
+%\usepackage{tikz}
+%\usetikzlibrary{calc,through,backgrounds,positioning}
+\usepackage{anysize}
+\usepackage{float}
+%\usepackage{stmaryrd}
+%\usepackage{amssymb}
+%\usepackage{amsthm}
+%\marginsize{3cm}{3cm}{3cm}{3cm}
+%\usepackage{amsmath}
+%\usepackage{color}
+%\usepackage{listings}
+%\usepackage{enumerate}
+
+\author{Marcin Jędrzejczyk,Paweł Ogorzały}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+\newtheorem{defi}{Definicja}
+\begin{document}
+	% \noindent -  w tym akapicie nie bedzie wciecia
+	% \ indent - to jest aut., ale powoduje ze jest wciecie
+	% \begin{flushleft}, flushright, center - wyrownianie akapitu
+	% \textbf{pogrubiany tekst}
+	% \textit{kursywa} 
+	% 					STRONY 
+	%  http://www.codecogs.com/latex/eqneditor.php 
+	%  http://www.matematyka.pl/latex.htm
+	% 
+	\begin{titlepage}
+	
+	
+		
+		
+		
+		\center % Center everything on the page
+		
+		%----------------------------------------------------------------------------------------
+		%	HEADING SECTIONS
+		%----------------------------------------------------------------------------------------
+		
+		\textsc{\LARGE Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie}\\[1.5cm] % Name of your university/college
+		\textsc{\Large Studio Projektowe \\ Projekt zaliczeniowy}\\[1.5cm]
+		%\textsc{\Large Krak�w}\\[0.5cm] % Major heading such as course name
+		%\textsc{\large }\\[0.5cm] % Minor heading such as course title
+		
+		%----------------------------------------------------------------------------------------
+		%	TITLE SECTION
+		%----------------------------------------------------------------------------------------
+		
+		\HRule \\[0.4cm]
+		{\fontsize{30}{40}\selectfont Gra mobilna Sudoku na telefony z systemem Android}
+		\HRule \\[5.5cm]
+		
+		%----------------------------------------------------------------------------------------
+		%	AUTHOR SECTION
+		%----------------------------------------------------------------------------------------
+		
+		% If you don't want a supervisor, uncomment the two lines below and remove the section above
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large 
+\emph{Autorzy:}\\
+Marcin \textsc{Jędrzejczyk}\\ 
+Paweł \textsc{Ogorzały}
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Opiekun:}\\
+ Dr inż. Maciej \textsc{Szymkat}  % Supervisor's Name
+\end{flushright}
+\end{minipage} \\[5cm]
+
+		
+		%----------------------------------------------------------------------------------------
+		%	DATE SECTION
+		%----------------------------------------------------------------------------------------
+		
+		{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+		
+		%----------------------------------------------------------------------------------------
+		%	LOGO SECTION
+		%----------------------------------------------------------------------------------------
+		
+		%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+		
+		%----------------------------------------------------------------------------------------
+		
+		\vfill % Fill the rest of the page with whitespace
+		
+	\end{titlepage}
+	
+	\newpage
+	
+	\tableofcontents
+	\newpage
+	
+	\listoffigures
+	\newpage
+	
+	
+	
+	
+	\section{Sudoku}
+	\subsection{Co to Sudoku}
+W Sudoku gra się na planszy o wymiarach 9x9 podzielonej na mniejsze "obszary" o wymiarach 3x3.  Na początku gry niektóre z pól planszy Sudoku są już wypełnione liczbami.  Celem gry jest uzupełnienie pozostałych pól planszy cyframi od 1 do 9 (po jednej cyfrze w każdym polu) przy zachowaniu następujących reguł:
+\begin{itemize}
+\item Każda cyfra może się pojawić tylko raz w każdym wierszu,
+\item Każda cyfra może się pojawić tylko raz w każdej kolumnie,
+\item Każda cyfra może się pojawić tylko raz w każdym obszarze.
+\end{itemize}
+\subsection{Liczba możliwych plansz}
+W 2005 matematycy Bertram Felgenhauer z Politechniki w Dreźnie oraz Frazer Jarvis z Uniwersytetu w Sheffield udowodnili, że istnieje 6 670 903 752 021 072 936 960 różnych poprawnych plansz Sudoku. Po utożsamieniu wersji różniących się permutacją cyfr, wierszy, lub kolumn, oraz powstałych przez odbicia i obroty, pozostaje 5 472 730 538 plansz[3]. Ciekawostką jest, że aby rozwiązać Sudoku, potrzeba mieć podanych minimum 17 cyfr w całym diagramie, inaczej rozwiązanie będzie niejednoznaczne[4]. Należy przy tym zaznaczyć, że nie każdy układ 17 cyfr daje jednoznaczne rozwiązanie. Liczba znanych 17-cyfrowych plansz Sudoku dających jednoznaczne rozwiązanie to 49 151[5].
+\subsection{Metodyka pracy}
+Projekt został zrealizowany w zespole: Paweł Ogorzały i Marcin Jędrzejczyk.\\
+W celu zrealizowania projektu wykorzystano środowiska projektowe: Visual Studio 2015 i Unity3D. Kod aplikacji został napisany w języku C\#.\\
+Za metodykę pracy wybrano metodę przyrostową.
+	
+\subsection{Krótki opis}	
+	Gra mobilna  zawiera wyjaśnienie zasad Sudoku i krótki tutorial jak grać. Możliwe jest wybranie poziomu trudności planszy. Do wyboru są: łatwy, normalny i trudny poziom rozgrywki. Plansze są generowane na początku każdej gry, dzięki temu zminimalizowane zostaje prawdopodobieństwo rozgrywania dwa razy tej samej planszy.\\
+
+Na ilość uzyskanych punktów przez gracza, wpływa ilość popełnianych pomyłek oraz czas ukończenia rozgrywki. Aplikacja posiada lokalną, dla danego urządzenia, tablicę wyników, z podziałem na poziomy trudności.\\
+
+Podczas gry wyświetlane jest rząd przycisków z cyframi od 1 do 9. W momencie wybrania pola, które chcemy uzupełnić rząd podświetli możliwe uzupełnienia kwadratu 9x9. Ponadto w razie błędnego wypełnienia pola, możemy je wyczyścić.
+
+	
+\vfill
+\newpage	
+\section{Interfejs gracza}
+\subsection{Opis elementów GUI}
+Screen + opis co elementy przedstawione robią
+\subsection{Jak grać}
+
+
+
+\vfill
+	\newpage
+\section{Struktura aplikacji}
+\subsection{Moduły}
+\subsection{Diagram klas}
+\subsection{Algorytm generowania plansz}
+
+\vfill
+\newpage
+\section{Testy i wdrożenia}
+\subsection{Wdrożenie}
+Aplikacja została zaprojektowana i zrealizowana w celach niekomercyjnych, dlatego nie została opublikowana w Sklepie Play. Jednakże udostępniliśmy cały projekt poprzez publiczne repozytorium github z licencją opensouce MIT.
+\subsection{Testy}
+Aplikacja została przetestowana na poniższych modelach telefonów:
+\begin{itemize}
+\item przykład LG Spirit - Android 6.0 - Gra działała płynnie, nie wykryto błędów uniemożliwiających zakończenie gry.
+\item
+\end{itemize}
+
+\subsection{Wnioski}
+Na podstawie testów i komentarzy osób testujących oraz spełnionych wymagań, projekt można uznać za pomyślnie zakończony.
+
+
+\vfill
+\newpage
+\section{Rozwój}
+Projekt w przyszłości można rozwinąć o kilka rzeczy:
+\begin{itemize}
+\item połączenie z mediami społecznościowymi, t.j. facebook, twitter,
+\item tabele wyników przechowywaną globalnie na serwerze,
+\item system wyświetlający reklamy,
+\item system rejestracji użytkowników, dla zapewnienia unikalnych nicków graczy.
+\end{itemize}
+
+	
+	% latex(szybka kompilacja),bibtex,kompilacja,kompilacja
+%\bibliographystyle{plain}% plain/abbrv/alpha
+%\bibliography{bibliografia}%plik .bib
+\end{document}
+
+
