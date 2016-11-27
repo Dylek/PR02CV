@@ -7,6 +7,7 @@ public class InterfaceController : MonoBehaviour {
     public Text timer;
     public Text score;
     public Text nick;
+    public Text infoText;
     private GameController gameContoller;
     // Use this for initialization
     void Start() {
@@ -37,7 +38,11 @@ public class InterfaceController : MonoBehaviour {
     }
     public void CheckGameRulesButt()
     {
-        gameContoller.CheckGameRules();
+        bool what;
+        what=gameContoller.CheckGameRules();
+        Debug.Log("Rules: "+what);
+        string strWhat = what ? "You dont have errors": "You have errors" ;
+        infoText.text=strWhat;
     }
 
 }

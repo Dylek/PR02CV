@@ -16,8 +16,8 @@ public class GameController : MonoBehaviour {
     //private Color pressed = new Color();    
     private Color colorBackup=new Color();
     private SudokuField[,] sudokuBoard = new SudokuField[9, 9];
-    private bool toContinue = false; 
-
+    private bool toContinue = false;
+    public Text infoText;
 
     //Robimy singleton
     void Awake(){
@@ -31,22 +31,13 @@ public class GameController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         clickedFieldButton = null;
-        //TODO zbierz buttony
-      //  Debug.Log("sudokuBoard[temp.y][temp.x]|:" + sudokuBoard.GetType());
-        GameObject[] buttons = GameObject.FindGameObjectsWithTag("button");
-       // Debug.Log(buttons.Length);
-        //TODO powsadzaj je w odpowiednie miejsca
+      
+        GameObject[] buttons = GameObject.FindGameObjectsWithTag("button");    
+       
         foreach (GameObject obj in buttons)
         {
-            SudokuField ten = obj.GetComponent<SudokuField>();
-           // Debug.Log("ten|:"+ten.GetInstanceID());
-
-            //SudokuField temp = GameObject.FindObjectOfType<SudokuField>();
-           // Debug.Log("temp|:" + temp.GetInstanceID());
-            //SudokuField temp = obj.GetComponent<SudokuField>();
-            sudokuBoard[ten.y-1, ten.x-1] = ten;//TU COŚ NIE PYKA
-            //Debug.Log("sudokuBoard[ten.y][ten.x]|:" + sudokuBoard.GetType());
-          //  Debug.Log("sudokuBoard["+ (ten.y - 1) + ","+(ten.x - 1) +"|:" + sudokuBoard[ten.y - 1, ten.x - 1].gameObject.GetInstanceID());
+            SudokuField ten = obj.GetComponent<SudokuField>();       
+            sudokuBoard[ten.y-1, ten.x-1] = ten;           
 
         }
         //TODO odpal generowanie sudoku w zależności od poziomu
@@ -54,15 +45,15 @@ public class GameController : MonoBehaviour {
         Debug.Log("WTF:"+sudokuBoard[4,7]);       
         foreach(SudokuField sd in sudokuBoard)
         {           
-            // sd.sudokuValue = SudokuGenerator.a[sd.y, sd.x];
+            
             int a=SudokuGenerator.a[sd.y - 1, sd.x - 1];
             sd.SudokuValue = SudokuGenerator.a[sd.y-1,sd.x-1];
             if (a != 0)
             {
-                sd.button.interactable = false;
-                
+                sd.button.interactable = false;                
             }
         }
+        
         Debug.Log(MyPlayerSave.PlayerNick);
         interfaceControll.nick.text = MyPlayerSave.PlayerNick;
         interfaceControll.timer.text = "Time: " + MyPlayerSave.PlayerTime;
@@ -100,30 +91,146 @@ public class GameController : MonoBehaviour {
         sudokuBoard[yButtom-1,xButton-1].SudokuValue = 0;
         //clickedFieldButton.SetText(" ");
     }
-    public void CheckGameRules()
+
+    //False jeśli mamy błędy, true jeśli ok(albo mamy gdzieś puste pola
+    public bool CheckGameRules()
     {
         int errors = 0;
-        //TODO w kij dużo if'ów
-    
+        int empty = 0;
 
-
-        if (errors == 0)
+        Dictionary<int, int> dictCheck = new Dictionary<int, int>();
+        for(int i = 0; i <= 9; i++)
         {
-            addScore(400);
-            Debug.Log("No error");
-        }else
-        {
-            addScore(-5*errors);
-            Debug.Log("NOPE");
+            dictCheck.Add(i, 0);
+        }
+        int[,] intBoard = getBoardInINT();
+        for(int i = 0; i < 9; i++)        {
+            for(int j = 0; j < 9; j++)            {
+                
+               
+                dictCheck[intBoard[i, j]] = dictCheck[intBoard[i, j]] + 1;
+            }
+            if (dictCheck[0] > 0)
+            {
+                empty += 1;
+            }
+            for (int j = 1; j <= 9; j++)
+            {
+                if (dictCheck[j] > 1)
+                {
+                    // brak zer, ale coś się powtarza, gdyż zbiór nie ma 9 elemntów
+                    errors += 1;
+                }
+            }
+            for (int l = 0; l <= 9; l++)
+            {
+                dictCheck[l] = 0;
+            }
         }
 
-        //if na zwycięstwo
+        for (int i = 0; i < 9; i++)        {
+            for (int j = 0; j < 9; j++)            {
+                //lecimy po wierszach
+                
+               
+                dictCheck[intBoard[j, i]]=dictCheck[intBoard[j, i]] +1;
+            }
+            if (dictCheck[0] > 0)
+            {
+                empty += 1;
+            }
+            for (int j = 1; j <= 9; j++)
+            {
+                if (dictCheck[j] > 1)
+                {
+                    // brak zer, ale coś się powtarza, gdyż zbiór nie ma 9 elemntów
+                    errors += 1;
+                }
+            }
+            for (int l = 0; l <= 9; l++)
+            {
+                dictCheck[l]=0;
+            }
+        }
+
+        int iBase = 0;
+        int jBase = 0;
+
+        while (iBase<9)        {
+            for (int i = 0 + iBase; i < 3 + iBase; i++)            {
+                for (int j = 0 + jBase; j < 3 + jBase; j++)                {                                 
+                    
+                    dictCheck[intBoard[j, i]]=dictCheck[intBoard[j, i]] + 1;
+                }
+
+            }
+           
+            if (dictCheck[0] > 0)
+            {
+                empty += 1;
+            }
+            for (int j = 1; j <= 9; j++)
+            {
+                if (dictCheck[j] > 1)
+                {
+                    // brak zer, ale coś się powtarza, gdyż zbiór nie ma 9 elemntów
+                    errors += 1;
+                }
+            }
+            //dictCheck.Clear();
+
+            for (int l = 0; l <= 9; l++)
+            {
+                dictCheck[l]=0;
+            }
+           
+            jBase += 3;
+            if (jBase > 6){
+                jBase = 0;
+                iBase += 3;
+            }
+        }
+
+
+        if (errors == 0 && empty == 0)
+        {
+            addScore(400);
+            Debug.Log("WIN");
+            GameOver();
+            return true;//true bo ok i wygrana
+        }
+        else if (errors == 0) {
+            Debug.Log("errors = 0");
+            return true;//true bo ok
+        }
+        else
+        {
+            addScore(-5 * errors);
+            Debug.Log("NOPE minus points");
+        }
+        Debug.Log("errors = "+errors);
+        return false;//domyślnie jest błąd
+    }
+
+    private int[,] getBoardInINT()
+    {
+        int [,] intBoard = new int[9, 9];
+        foreach (SudokuField sd in sudokuBoard)
+        {
+            intBoard[sd.y-1, sd.x-1] = sd.SudokuValue;          
+        }
+        return intBoard;
     }
 
     private void addScore(int a)
     {
         interfaceControll.setScoreText(scoreControll.Score);
         scoreControll.addScore(a);
+    }
+
+    private void GameOver()
+    {
+
     }
     
 }
