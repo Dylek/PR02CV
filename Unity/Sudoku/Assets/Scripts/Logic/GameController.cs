@@ -232,7 +232,7 @@ public class GameController : MonoBehaviour {
 
     private void GameOver()
     {
-
+        MyPlayerSave.BoardValues = sudokuBoard;
     }
 
 
@@ -243,7 +243,8 @@ public class GameController : MonoBehaviour {
         {
             Time.timeScale = 1.0f;
             pouse = false;
-        }      
+        }
+        MyPlayerSave.BoardValues = sudokuBoard;
     }
 
     public SudokuField[,] getSB()
@@ -254,6 +255,7 @@ public class GameController : MonoBehaviour {
     void OnDisable()
     {
         MyPlayerSave.BoardValues = sudokuBoard;
+
     }
 
 }
