@@ -82,7 +82,7 @@ public class ScoreController : MonoBehaviour {
         for (int i = 0; i < 5; i++)
         {
 
-            for (int j = 0; j < i; j++)
+            for (int j = 0; j < 3; j++)
             {
                 initB[j,i] = new nickScore("EMPTY",0);
             }

@@ -12,8 +12,7 @@ public class MenuController : MonoBehaviour {
     public GameObject tutorialButton;
     public GameObject continueButton;
     public GameObject backButton;
-    public GameObject diffSlider;
-    public GameObject gameTypeStuff;
+    public GameObject diffSlider;  
     public GameObject nick;
     public GameObject rules;
     public GameObject scores;
@@ -35,7 +34,7 @@ public class MenuController : MonoBehaviour {
         tutorialButton.SetActive(false);
         continueButton.SetActive(false);
         diffSlider.SetActive(true);
-        gameTypeStuff.SetActive(true);
+        
         nick.SetActive(true);
         
         startButton.SetActive(true);
@@ -75,7 +74,7 @@ public class MenuController : MonoBehaviour {
             default: diff = DifficultLevel.easy; break;
         }
         Debug.Log("switch ");
-        MyPlayerSave.PlayerGameType =(int) gameTypeStuff.GetComponent<Slider>().value;
+        
         Debug.Log("PlayerGameType");
         MyPlayerSave.PlayerNick = nick.GetComponent<InputField>().text;
         Debug.Log("PlayerNick");
@@ -96,6 +95,7 @@ public class MenuController : MonoBehaviour {
     }
     private void BringInitMenu()
     {
+        
         exitButton.SetActive(true);
         newGameButton.SetActive(true);
         scoresButton.SetActive(true);
@@ -104,7 +104,7 @@ public class MenuController : MonoBehaviour {
         nick.SetActive(false);
         backButton.SetActive(false);
         diffSlider.SetActive(false);
-        gameTypeStuff.SetActive(false);
+       
         startButton.SetActive(false);
         rules.SetActive(false);
         scores.SetActive(false);

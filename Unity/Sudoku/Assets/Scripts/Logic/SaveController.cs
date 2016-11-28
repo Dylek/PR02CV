@@ -19,31 +19,27 @@ public static class SaveController  {
             default: MyPlayerSave.PlayerLevel = DifficultLevel.easy; break;
         }
         MyPlayerSave.PlayerTime = PlayerPrefs.GetFloat("PlayerTime");
-        MyPlayerSave.PlayerScore = PlayerPrefs.GetInt("PlayerScore");
-        string str = PlayerPrefs.GetString("PlayerBoad");
-        string[] strT = str.Split(',');
-        MyPlayerSave.boardValues = new int[81];
-        for (int i = 0; i < 81; i++)
-        {
-            MyPlayerSave.boardValues[i] = int.Parse(strT[i]);
-        }
+        MyPlayerSave.PlayerScore = PlayerPrefs.GetInt("PlayerScore");        
+
+        string str = PlayerPrefs.GetString("sudokuBoard");
+        MyPlayerSave.BoardValues = JsonUtility.FromJson<SudokuField[,]>(str);      
+
     }
 
     public static void SaveGame()
-    {      
-        
+    {
+       
         PlayerPrefs.SetInt("PlayerGameType", MyPlayerSave.PlayerGameType);
         PlayerPrefs.SetString("PlayerNick", MyPlayerSave.PlayerNick);
         PlayerPrefs.SetString("PlayerLevel", MyPlayerSave.PlayerLevel.ToString());
         Debug.Log(MyPlayerSave.PlayerLevel.ToString());
         PlayerPrefs.SetFloat("PlayerTime", MyPlayerSave.PlayerTime);
         PlayerPrefs.SetInt("PlayerScore", MyPlayerSave.PlayerScore);
-        string str = "";
-        //Tu coś nie pyka
-        for (int i = 0; i < 81; i++)
-        {
-            str = str + "," + MyPlayerSave.boardValues[i];
-        }
+
+        string jsonS = JsonUtility.ToJson(MyPlayerSave.BoardValues);
+        PlayerPrefs.SetString("sudokuBoard", jsonS);
+        PlayerPrefs.Save();
+
         PlayerPrefs.Save();
     }
 

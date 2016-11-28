@@ -246,4 +246,14 @@ public class GameController : MonoBehaviour {
         }      
     }
 
+    public SudokuField[,] getSB()
+    {
+        return sudokuBoard;
+    }
+
+    void OnDisable()
+    {
+        MyPlayerSave.BoardValues = sudokuBoard;
+    }
+
 }

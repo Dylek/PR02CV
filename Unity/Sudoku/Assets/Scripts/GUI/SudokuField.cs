@@ -2,6 +2,9 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System;
+
+[Serializable]
 public class SudokuField : MonoBehaviour {
     public int x;
     public int y;
