@@ -44,6 +44,7 @@ public static class SaveController  {
         {
             str = str + "," + MyPlayerSave.boardValues[i];
         }
+        PlayerPrefs.Save();
     }
 
 
