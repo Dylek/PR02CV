@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku.CSharp.Plugins", "Sudoku.CSharp.Plugins.csproj", "{369FB296-2560-D38E-6148-2B4BA46CEC62}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku.CSharp", "Sudoku.CSharp.csproj", "{09F85ACC-0DC3-57AE-3D15-94E367C9BA29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sudoku.CSharp.Editor.Plugins", "Sudoku.CSharp.Editor.Plugins.csproj", "{9A9BFD4A-F54D-3C81-51AA-3EC6EA007FD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{369FB296-2560-D38E-6148-2B4BA46CEC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{369FB296-2560-D38E-6148-2B4BA46CEC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{369FB296-2560-D38E-6148-2B4BA46CEC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{369FB296-2560-D38E-6148-2B4BA46CEC62}.Release|Any CPU.Build.0 = Release|Any CPU
 		{09F85ACC-0DC3-57AE-3D15-94E367C9BA29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{09F85ACC-0DC3-57AE-3D15-94E367C9BA29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09F85ACC-0DC3-57AE-3D15-94E367C9BA29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09F85ACC-0DC3-57AE-3D15-94E367C9BA29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9BFD4A-F54D-3C81-51AA-3EC6EA007FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9BFD4A-F54D-3C81-51AA-3EC6EA007FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9BFD4A-F54D-3C81-51AA-3EC6EA007FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9BFD4A-F54D-3C81-51AA-3EC6EA007FD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

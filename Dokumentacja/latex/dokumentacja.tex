@@ -134,8 +134,90 @@ Podczas gry wyświetlane jest rząd przycisków z cyframi od 1 do 9. W momencie 
 \vfill
 \newpage	
 \section{Interfejs gracza}
+W sekcji tej zaprezentowane zostanie działanie oraz interfejs gry.
 \subsection{Opis elementów GUI}
-Screen + opis co elementy przedstawione robią
+Po uruchomieniu gry oczom gracza ukazuje się menu główne. Gracz może uruchomić nową grę, kontynuować rozgrywkę, zobaczyć najlepsze wyniki a także poznać zasady gry w tutorialu.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3cm]{zrzuty/1.png}
+	\caption{Menu główne}
+	\label{fig:menu}
+\end{figure}
+Po wybraniu Highscores gracz otrzymuje listę najlepszych wyników podzielonych na poziomy trudności gry.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3cm]{zrzuty/12.png}
+	\caption{Lista najlepszych wyników}
+	\label{fig:highscores}
+\end{figure}
+Po wyborze nowej gry gracz może podać swój nick poprzez wpisanie go w polu "Enter text...". Ma do wyboru trzy poziomy trudności: Easy, Medium oraz Hard.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3cm]{zrzuty/2.png}
+	\caption{Menu nowej rozgrywki}
+	\label{fig:menu2}
+\end{figure} 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3cm]{zrzuty/3.png}
+	\caption{Wybór nicku}
+	\label{fig:wybor_nicku}
+\end{figure}
+Po kliknięciu przycisku Start następuję wygenerowanie planszy i rozpoczyna się właściwa rozgrywka.  
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3cm]{zrzuty/4.png}
+	\caption{Nowa gra}
+	\label{fig:nowagra}
+\end{figure}
+W trakcie gry mierzony jest czas oraz liczone są punkty. Po wyborze pustego pola zaznaczane jest ono na czerwono i gracz poprzez wybór cyfry z dolnego paska wprowadza wartość do pola.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3cm]{zrzuty/5.png}
+	\caption{Wybór pola}
+	\label{fig:wybor_pola}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3cm]{zrzuty/6.png}
+	\caption{Wprowadzenie wartości}
+	\label{fig:wprowadzenie_wartosci}
+\end{figure}
+Gracz ma możliwość sprawdzenia zgodności wprowadzonych wartości z zasadami Sudoku poprzez kliknięcie przycisku Check. W przypadku złamania zasad pojawia się napis "You have errors".
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3cm]{zrzuty/7.png}
+	\caption{Sprawdzenie planszy w sytuacji złamania zasad Sudoku}
+	\label{fig:check_errors}
+\end{figure}
+Gracz może wyczyścić pole przyciskiem Clear. Wiąże się to jednak z otrzymaniem ujemnych punktów.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3cm]{zrzuty/8.png}
+	\caption{Wyczyszczenie pola}
+	\label{fig:clear}
+\end{figure}
+W przypadku sprawdzenia planszy i braku niezgodności wyświetlany jest komunikat "You don't have errors".
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3cm]{zrzuty/9.png}
+	\caption{Sprawdzenie planszy w przypadku braku niezgodności}
+	\label{fig:check_ok}
+\end{figure}
+Po kliknięciu przycisku Pause następuje wstrzymanie rozgrywki i pojawia się lista opcji opcji do wyboru. Gracz może wrócić do gry, włączyć/wyłączyć muzykę, wyjść do menu głównego lub wyłączyć grę.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3cm]{zrzuty/10.png}
+	\caption{Menu w trakcie gry przy włączonej muzyce}
+	\label{fig:menu_pause}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=3cm]{zrzuty/11.png}
+	\caption{Menu w trakcie gry przy wyłączonej muzyce}
+	\label{fig:menu_pause2}
+\end{figure}
+
 \subsection{Jak grać}
 
 

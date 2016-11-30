@@ -6,13 +6,13 @@
 \contentsline {subsection}{\numberline {1.4}Kr\IeC {\'o}tki opis}{3}
 \contentsline {section}{\numberline {2}Interfejs gracza}{4}
 \contentsline {subsection}{\numberline {2.1}Opis element\IeC {\'o}w GUI}{4}
-\contentsline {subsection}{\numberline {2.2}Jak gra\IeC {\'c}}{4}
-\contentsline {section}{\numberline {3}Struktura aplikacji}{5}
-\contentsline {subsection}{\numberline {3.1}Modu\IeC {\l }y}{5}
-\contentsline {subsection}{\numberline {3.2}Diagram klas}{5}
-\contentsline {subsection}{\numberline {3.3}Algorytm generowania plansz}{5}
-\contentsline {section}{\numberline {4}Testy i wdro\IeC {\.z}enia}{6}
-\contentsline {subsection}{\numberline {4.1}Wdro\IeC {\.z}enie}{6}
-\contentsline {subsection}{\numberline {4.2}Testy}{6}
-\contentsline {subsection}{\numberline {4.3}Wnioski}{6}
-\contentsline {section}{\numberline {5}Rozw\IeC {\'o}j}{7}
+\contentsline {subsection}{\numberline {2.2}Jak gra\IeC {\'c}}{8}
+\contentsline {section}{\numberline {3}Struktura aplikacji}{9}
+\contentsline {subsection}{\numberline {3.1}Modu\IeC {\l }y}{9}
+\contentsline {subsection}{\numberline {3.2}Diagram klas}{9}
+\contentsline {subsection}{\numberline {3.3}Algorytm generowania plansz}{9}
+\contentsline {section}{\numberline {4}Testy i wdro\IeC {\.z}enia}{10}
+\contentsline {subsection}{\numberline {4.1}Wdro\IeC {\.z}enie}{10}
+\contentsline {subsection}{\numberline {4.2}Testy}{10}
+\contentsline {subsection}{\numberline {4.3}Wnioski}{10}
+\contentsline {section}{\numberline {5}Rozw\IeC {\'o}j}{11}

@@ -63,6 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Sudoku.CSharp.Plugins.csproj">
+      <Project>{369FB296-2560-D38E-6148-2B4BA46CEC62}</Project>
+      <Name>Sudoku.CSharp.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scripts\GUI\InterfaceController.cs" />
     <Compile Include="Assets\Scripts\GUI\MenuController.cs" />
     <Compile Include="Assets\Scripts\GUI\SudokuField.cs" />
@@ -73,7 +79,11 @@
     <Compile Include="Assets\Scripts\Logic\Timer.cs" />
     <Compile Include="Assets\Scripts\SoundModule\SoundController.cs" />
     <Compile Include="Assets\Scripts\Utilities\DoNotDestroyOnLoad.cs" />
+    <Compile Include="Assets\Scripts\Utilities\HighScores.cs" />
     <Compile Include="Assets\Scripts\Utilities\MyPlayerSave.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Plugins\JSON\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
