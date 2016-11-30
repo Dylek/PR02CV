@@ -55,6 +55,6 @@ public class SudokuField : MonoBehaviour {
 
     public JSONObject toJSON()
     {
-        return new JSONObject("{\"x\":\"" + x+ "\",\"y\":\"" + y+ "\",\"value\":" + sudokuValue+ ",\"generated\":\"" + generated+ "\"}");
+        return new JSONObject("{\"x\":" + x+ ",\"y\":" + y+ ",\"value\":" + sudokuValue+ ",\"generated\":\"" + generated+ "\"}");
     }
 }

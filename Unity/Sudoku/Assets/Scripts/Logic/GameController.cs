@@ -275,9 +275,11 @@ public class GameController : MonoBehaviour {
 
     void OnDisable()
     {
+        SoundController.instance.PlayBackground(SoundController.instance.music2);
         if (toContinue) {
             PlayerPrefs.SetInt("toContinue", 1);
-          MyPlayerSave.BoardValues = sudokuBoard;
+
+            MyPlayerSave.BoardValues = sudokuBoard;
             SaveController.SaveGame();
         }else
         {
