@@ -83,8 +83,8 @@ public class InterfaceController : MonoBehaviour {
             SoundController.instance.SetSound(0);
             muteButt.text = "UnMute Sound";
             muted = true;
-        }
-       
+        }       
         
     }
+
 }

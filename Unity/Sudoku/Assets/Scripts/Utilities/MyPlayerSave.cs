@@ -82,4 +82,19 @@ public class MyPlayerSave : MonoBehaviour {
         get { return boardValues; }
         set { boardValues = value; }
     }
+    public static JSONObject getJSONBoard()
+    {
+        JSONObject obj = new JSONObject();
+
+        foreach (SudokuField sd in boardValues)
+        {
+            obj.AddField(sd.x + "," + sd.y,sd.toJSON());
+        }
+
+
+
+       
+     
+        return obj;
+    }
 }

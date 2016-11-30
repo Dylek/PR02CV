@@ -16,12 +16,14 @@ public class MenuController : MonoBehaviour {
     public GameObject nick;
     public GameObject rules;
     public GameObject scores;
-
-    private Text scoreText;
+    public Text scoreText;
+    //private Text scoreText;
 	// Use this for initialization
 	void Start () {
+        ScoreController.initHighScoreBoard();
         BringInitMenu();
         scoreText = scores.GetComponent<Text>();
+        
         Debug.Log("HighScores text found");
     }
 	
@@ -59,6 +61,7 @@ public class MenuController : MonoBehaviour {
         if (CheckSave())
         {
             SaveController.GetSavedGame();
+            SceneManager.LoadScene("sudoku");
         }
 
     }
@@ -80,6 +83,7 @@ public class MenuController : MonoBehaviour {
         Debug.Log("PlayerNick");
         MyPlayerSave.PlayerLevel = diff;
         Debug.Log("PlayerLevel ");
+        PlayerPrefs.SetInt("toContinue",0);
         SceneManager.LoadScene("sudoku");
 
     }
@@ -117,23 +121,25 @@ public class MenuController : MonoBehaviour {
             scoresButton.GetComponent<Button>().interactable = false;
         }else
         {
-            string str = PlayerPrefs.GetString("highScores");
-            nickScore[,] scoreBoard = JsonUtility.FromJson<nickScore[,]>(str);
-            
-            scoreText.text = "EASY:";
-            for (int i = 0; i < 5; i++)
-            {
-                scoreText.text = scoreText.text +"\n"+ scoreBoard[0,i].nick+"   :    "+ scoreBoard[0, i].score;
-            }
-            scoreText.text = scoreText.text+ "\nMEDIUM:";
-            for (int i = 0; i < 5; i++)
-            {
-                scoreText.text = scoreText.text + "\n" + scoreBoard[1, i].nick + "   :    " + scoreBoard[1, i].score;
-            }
-            scoreText.text = scoreText.text + "\nHARD:";
-            for (int i = 0; i < 5; i++)
-            {
-                scoreText.text = scoreText.text + "\n" + scoreBoard[2, i].nick + "   :    " + scoreBoard[2, i].score;
+            if (PlayerPrefs.HasKey("highScores")) { 
+                string str = PlayerPrefs.GetString("highScores");
+               nickScore[,] scoreBoard = JsonUtility.FromJson<nickScore[,]>(str);
+                JSONObject jsonObj = new JSONObject(str);
+                scoreText.text = "EASY:";
+                for (int i = 0; i < 5; i++)
+                {
+                    scoreText.text = scoreText.text + "\n" + jsonObj.GetField("scores")[i].GetField("nick")+"   :   "+ jsonObj.GetField("scores")[i].GetField("score");
+               }
+               scoreText.text = scoreText.text+ "\nMEDIUM:";
+                for (int i = 5; i < 10; i++)
+               {
+                    scoreText.text = scoreText.text + "\n" + jsonObj.GetField("scores")[i].GetField("nick") + "   :   " + jsonObj.GetField("scores")[i].GetField("score");
+                }
+               scoreText.text = scoreText.text + "\nHARD:";
+               for (int i = 10; i < 15; i++)
+                {
+                    scoreText.text = scoreText.text + "\n" + jsonObj.GetField("scores")[i].GetField("nick") + "   :   " + jsonObj.GetField("scores")[i].GetField("score");
+                }
             }
         }
     }
@@ -149,9 +155,14 @@ public class MenuController : MonoBehaviour {
     //Sprawdzenie czy w player prefabs jest UnfinishedGame
     private bool CheckSave()
     {
-        bool unfinishedGame = false;
-        unfinishedGame = PlayerPrefs.HasKey("unfinishedGame");       
-        return unfinishedGame;
+        bool toContinue = false;
+        if (!PlayerPrefs.HasKey("toContinue"))
+        {
+            PlayerPrefs.SetInt("toContinue",0);
+            return false;
+        }
+        toContinue = PlayerPrefs.GetInt("toContinue") == 1 ? true : false;        
+        return toContinue;
     }
 
      

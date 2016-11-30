@@ -22,7 +22,9 @@ public static class SaveController  {
         MyPlayerSave.PlayerScore = PlayerPrefs.GetInt("PlayerScore");        
 
         string str = PlayerPrefs.GetString("sudokuBoard");
-        MyPlayerSave.BoardValues = JsonUtility.FromJson<SudokuField[,]>(str);      
+        MyPlayerSave.BoardValues = JsonUtility.FromJson<SudokuField[,]>(str);
+        Debug.Log(str);
+
 
     }
 
@@ -38,6 +40,7 @@ public static class SaveController  {
 
         string jsonS = JsonUtility.ToJson(MyPlayerSave.BoardValues);
         PlayerPrefs.SetString("sudokuBoard", jsonS);
+        Debug.Log(jsonS);
         PlayerPrefs.Save();
 
         PlayerPrefs.Save();

@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour {
     //private Color pressed = new Color();    
     private Color colorBackup=new Color();
     private SudokuField[,] sudokuBoard = new SudokuField[9, 9];
-    private bool toContinue = false;
+    private bool toContinue = true;
     private bool pouse = false;
 
     //Robimy singleton
@@ -41,19 +41,40 @@ public class GameController : MonoBehaviour {
             sudokuBoard[ten.y-1, ten.x-1] = ten;           
 
         }
-        //TODO odpal generowanie sudoku w zależności od poziomu
-        SudokuGenerator.GenerateSudokuBoard(DifficultLevel.medium);
-        Debug.Log("WTF:"+sudokuBoard[4,7]);       
-        foreach(SudokuField sd in sudokuBoard)
-        {           
-            
-            int a=SudokuGenerator.a[sd.y - 1, sd.x - 1];
-            sd.SudokuValue = SudokuGenerator.a[sd.y-1,sd.x-1];
-            if (a != 0)
+        if (PlayerPrefs.GetInt("toContinue") == 0) {
+            SudokuGenerator.GenerateSudokuBoard(DifficultLevel.medium);
+            Debug.Log("WTF:" + sudokuBoard[4, 7]);
+            foreach (SudokuField sd in sudokuBoard)
             {
-                sd.button.interactable = false;                
+
+                int a = SudokuGenerator.a[sd.y - 1, sd.x - 1];
+                sd.SudokuValue = SudokuGenerator.a[sd.y - 1, sd.x - 1];
+                if (a != 0)
+                {
+                    sd.button.interactable = false;
+                    sd.Generated = true;
+                }
             }
+        }else
+        {
+            //sudokuBoard = MyPlayerSave.BoardValues;
+            foreach (SudokuField sd in sudokuBoard)
+            {
+
+                if (MyPlayerSave.BoardValues[sd.y - 1, sd.x - 1].Generated) {
+                    sd.button.interactable = false;
+                    sd.Generated = true;
+                }
+               
+                sd.SudokuValue = MyPlayerSave.BoardValues[sd.y - 1, sd.x - 1].SudokuValue;
+               
+            }
+
+
+            timer.TimeFromStart = MyPlayerSave.PlayerTime;
+            scoreControll.Score = MyPlayerSave.PlayerScore;
         }
+       
         
         Debug.Log(MyPlayerSave.PlayerNick);
         interfaceControll.nick.text = MyPlayerSave.PlayerNick;
@@ -254,8 +275,15 @@ public class GameController : MonoBehaviour {
 
     void OnDisable()
     {
-        MyPlayerSave.BoardValues = sudokuBoard;
-
+        if (toContinue) {
+            PlayerPrefs.SetInt("toContinue", 1);
+          MyPlayerSave.BoardValues = sudokuBoard;
+            SaveController.SaveGame();
+        }else
+        {
+            PlayerPrefs.SetInt("toContinue", 0);
+        }
+      
     }
 
 }
