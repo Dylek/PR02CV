@@ -41,8 +41,16 @@ public class ScoreController : MonoBehaviour {
             PlayerPrefs.Save();
         }else
         {
-            string str = PlayerPrefs.GetString("highScores");
-            scoreBoard = JsonUtility.FromJson<nickScore[,]>(str);
+            int j = 0;
+            JSONObject json = new JSONObject(PlayerPrefs.GetString("highScores"));
+            foreach(String key in json.keys)
+            {
+                for(int i = 0; i < 5; i++)
+                {
+                    Debug.Log(json.GetField(key).ToString());
+                    scoreBoard[j, i] = new nickScore(json.GetField(key)[i].GetField("nick").ToString(), Int32.Parse((json.GetField(key)[i].GetField("score").ToString())));
+                }
+            }
         }
         
         
@@ -69,9 +77,38 @@ public class ScoreController : MonoBehaviour {
                 scoreBoard[k, i] = new nickScore(MyPlayerSave.PlayerNick,score);
             }
         }
+        JSONObject jsonS = new JSONObject();
+        JSONObject arr = new JSONObject();
+        JSONObject temp = new JSONObject();
 
-        string jsonS = JsonUtility.ToJson(scoreBoard);
-        PlayerPrefs.SetString("highScores",jsonS);
+        for(int i = 0; i < 5; i++)
+        {
+            temp.Clear();
+            temp.AddField("nick", scoreBoard[0, i].nick);
+            temp.AddField("score", scoreBoard[0, i].score);
+            arr.Add(temp);
+        }
+        jsonS.AddField("easy", arr);
+
+        for (int i = 0; i < 5; i++)
+        {
+            temp.Clear();
+            temp.AddField("nick", scoreBoard[1, i].nick);
+            temp.AddField("score", scoreBoard[1, i].score);
+            arr.Add(temp);
+        }
+        jsonS.AddField("medium", arr);
+
+        for (int i = 0; i < 5; i++)
+        {
+            temp.Clear();
+            temp.AddField("nick", scoreBoard[2, i].nick);
+            temp.AddField("score", scoreBoard[2, i].score);
+            arr.Add(temp);
+        }
+        jsonS.AddField("hard", arr);
+
+        PlayerPrefs.SetString("highScores",jsonS.ToString());
         Debug.Log(jsonS);
         PlayerPrefs.Save();
 
@@ -79,27 +116,21 @@ public class ScoreController : MonoBehaviour {
 
     public static void initHighScoreBoard()
     {
-        nickScore[,] initB = new nickScore[3, 5];
-        String scores = "{\"scores\":[";
-        for (int i = 0; i < 5; i++)
-        {
 
-            for (int j = 0; j < 3; j++)
-            {
-                //initB[j,i] = new nickScore("EMPTY",0);
-               // Debug.Log(JsonUtility.ToJson(initB[j, i]));
-                scores = scores + "{\"nick\":\"Empty\",\"score\":0},";            
-                
-            }
-
-        }
-       
-        scores = scores.Substring(0,scores.Length-1) + "]}";
-        Debug.Log(scores);
-        JSONObject jsonOb = new JSONObject(scores);
-
-        //Debug.Log(JsonUtility.ToJson(scores));
-        string jsonS = JsonUtility.ToJson(initB);
+        JSONObject arr = new JSONObject();
+        JSONObject empty = new JSONObject();
+        empty.AddField("nick", "empty");
+        empty.AddField("score", 0);
+        arr.Add(empty);
+        arr.Add(empty);
+        arr.Add(empty);
+        arr.Add(empty);
+        arr.Add(empty);
+        JSONObject jsonOb = new JSONObject();
+        jsonOb.AddField("easy", arr);
+        jsonOb.AddField("medium", arr);
+        jsonOb.AddField("hard", arr);
+        
         PlayerPrefs.SetString("highScores", jsonOb.ToString());
         Debug.Log(PlayerPrefs.GetString("highScores"));
        // Debug.Log(initB.ToString());

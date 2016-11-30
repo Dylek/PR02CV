@@ -122,22 +122,21 @@ public class MenuController : MonoBehaviour {
         {
             if (PlayerPrefs.HasKey("highScores")) { 
                 string str = PlayerPrefs.GetString("highScores");
-               nickScore[,] scoreBoard = JsonUtility.FromJson<nickScore[,]>(str);
                 JSONObject jsonObj = new JSONObject(str);
                 scoreText.text = "EASY:";
                 for (int i = 0; i < 5; i++)
                 {
-                    scoreText.text = scoreText.text + "\n" + jsonObj.GetField("scores")[i].GetField("nick")+"   :   "+ jsonObj.GetField("scores")[i].GetField("score");
+                    scoreText.text = scoreText.text + "\n" + jsonObj.GetField("easy")[i].GetField("nick")+"   :   "+ jsonObj.GetField("easy")[i].GetField("score");
                }
                scoreText.text = scoreText.text+ "\nMEDIUM:";
-                for (int i = 5; i < 10; i++)
+               for(int i = 0; i < 5; i++)
                {
-                    scoreText.text = scoreText.text + "\n" + jsonObj.GetField("scores")[i].GetField("nick") + "   :   " + jsonObj.GetField("scores")[i].GetField("score");
+                    scoreText.text = scoreText.text + "\n" + jsonObj.GetField("medium")[i].GetField("nick") + "   :   " + jsonObj.GetField("medium")[i].GetField("score");
                 }
                scoreText.text = scoreText.text + "\nHARD:";
-               for (int i = 10; i < 15; i++)
+               for(int i = 0; i < 5; i++)
                 {
-                    scoreText.text = scoreText.text + "\n" + jsonObj.GetField("scores")[i].GetField("nick") + "   :   " + jsonObj.GetField("scores")[i].GetField("score");
+                    scoreText.text = scoreText.text + "\n" + jsonObj.GetField("hard")[i].GetField("nick") + "   :   " + jsonObj.GetField("hard")[i].GetField("score");
                 }
             }
         }
