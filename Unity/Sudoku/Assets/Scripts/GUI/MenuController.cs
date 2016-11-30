@@ -23,7 +23,6 @@ public class MenuController : MonoBehaviour {
         ScoreController.initHighScoreBoard();
         BringInitMenu();
         scoreText = scores.GetComponent<Text>();
-        
         Debug.Log("HighScores text found");
     }
 	

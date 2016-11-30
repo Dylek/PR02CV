@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public static class SaveController  {
 
@@ -19,14 +20,22 @@ public static class SaveController  {
             default: MyPlayerSave.PlayerLevel = DifficultLevel.easy; break;
         }
         MyPlayerSave.PlayerTime = PlayerPrefs.GetFloat("PlayerTime");
-        MyPlayerSave.PlayerScore = PlayerPrefs.GetInt("PlayerScore");        
+        MyPlayerSave.PlayerScore = PlayerPrefs.GetInt("PlayerScore");
 
-        string str = PlayerPrefs.GetString("sudokuBoard");
-        MyPlayerSave.BoardValues = JsonUtility.FromJson<SudokuField[,]>(str);
-        Debug.Log(str);
+        JSONObject obj = new JSONObject(PlayerPrefs.GetString("sudokuBoard"));
+        SudokuField[,] sudokuBoard = new SudokuField[9, 9];
 
+        foreach (string key in obj.keys) {
+            Debug.Log(obj.GetField(key).ToString());
+            int x= Int32.Parse(obj.GetField(key).GetField("x").ToString());
+            int y= Int32.Parse(obj.GetField(key).GetField("y").ToString());
+            int val= Int32.Parse(obj.GetField(key).GetField("value").ToString());
+            bool gen = obj.GetField(key).GetField("y").ToString().Equals("true") ? true : false;
+            sudokuBoard[y - 1, x - 1] = new SudokuField(x, y, val, gen);
+        }               
+        Debug.Log(obj.keys);
 
-    }
+            }
 
     public static void SaveGame()
     {
@@ -38,11 +47,12 @@ public static class SaveController  {
         PlayerPrefs.SetFloat("PlayerTime", MyPlayerSave.PlayerTime);
         PlayerPrefs.SetInt("PlayerScore", MyPlayerSave.PlayerScore);
 
-        string jsonS = JsonUtility.ToJson(MyPlayerSave.BoardValues);
-        PlayerPrefs.SetString("sudokuBoard", jsonS);
-        Debug.Log(jsonS);
-        PlayerPrefs.Save();
 
+        JSONObject json = MyPlayerSave.getJSONBoard();
+
+       
+        PlayerPrefs.SetString("sudokuBoard", json.ToString());
+       
         PlayerPrefs.Save();
     }
 
