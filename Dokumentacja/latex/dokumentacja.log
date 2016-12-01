@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.19)  30 NOV 2016 23:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.19)  1 DEC 2016 14:42
 entering extended mode
 **./dokumentacja.tex
 (dokumentacja.tex
@@ -489,102 +489,155 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 [3] <zrzuty/1.png, id=25, 1084.05pt x 1927.2pt>
 File: zrzuty/1.png Graphic file (type png)
  <use zrzuty/1.png>
-Package pdftex.def Info: zrzuty/1.png used on input line 142.
-(pdftex.def)             Requested size: 85.35826pt x 151.73839pt.
+Package pdftex.def Info: zrzuty/1.png used on input line 140.
+(pdftex.def)             Requested size: 142.26378pt x 252.89732pt.
 
 <zrzuty/12.png, id=26, 1084.05pt x 1927.2pt>
 File: zrzuty/12.png Graphic file (type png)
  <use zrzuty/12.png>
-Package pdftex.def Info: zrzuty/12.png used on input line 149.
-(pdftex.def)             Requested size: 85.35826pt x 151.73839pt.
-
-<zrzuty/2.png, id=27, 1084.05pt x 1927.2pt>
+Package pdftex.def Info: zrzuty/12.png used on input line 147.
+(pdftex.def)             Requested size: 142.26378pt x 252.89732pt.
+ [4 <./zrzuty/1.png>] <zrzuty/2.png, id=30, 1084.05pt x 1927.2pt>
 File: zrzuty/2.png Graphic file (type png)
  <use zrzuty/2.png>
-Package pdftex.def Info: zrzuty/2.png used on input line 156.
-(pdftex.def)             Requested size: 85.35826pt x 151.73839pt.
+Package pdftex.def Info: zrzuty/2.png used on input line 154.
+(pdftex.def)             Requested size: 142.26378pt x 252.89732pt.
 
-<zrzuty/3.png, id=28, 1084.05pt x 1927.2pt>
+<zrzuty/3.png, id=31, 1084.05pt x 1927.2pt>
 File: zrzuty/3.png Graphic file (type png)
  <use zrzuty/3.png>
-Package pdftex.def Info: zrzuty/3.png used on input line 162.
-(pdftex.def)             Requested size: 85.35826pt x 151.73839pt.
- [4 <./zrzuty/1.png> <./zrzuty/12.png>] <zrzuty/4.png, id=32, 1084.05pt x 1927.
+Package pdftex.def Info: zrzuty/3.png used on input line 160.
+(pdftex.def)             Requested size: 142.26378pt x 252.89732pt.
+ [5 <./zrzuty/12.png> <./zrzuty/2.png>] <zrzuty/4.png, id=35, 1084.05pt x 1927.
 2pt>
 File: zrzuty/4.png Graphic file (type png)
 
 <use zrzuty/4.png>
-Package pdftex.def Info: zrzuty/4.png used on input line 169.
-(pdftex.def)             Requested size: 85.35826pt x 151.73839pt.
- <zrzuty/5.png, id=33, 1084.05pt x 1927.2pt>
+Package pdftex.def Info: zrzuty/4.png used on input line 167.
+(pdftex.def)             Requested size: 142.26378pt x 252.89732pt.
+ <zrzuty/5.png, id=36, 1084.05pt x 1927.2pt>
 File: zrzuty/5.png Graphic file (type png)
 
 <use zrzuty/5.png>
-Package pdftex.def Info: zrzuty/5.png used on input line 176.
-(pdftex.def)             Requested size: 85.35826pt x 151.73839pt.
- <zrzuty/6.png, id=34, 1084.05pt x 1927.2pt>
+Package pdftex.def Info: zrzuty/5.png used on input line 174.
+(pdftex.def)             Requested size: 142.26378pt x 252.89732pt.
+ <zrzuty/6.png, id=37, 1084.05pt x 1927.2pt>
 File: zrzuty/6.png Graphic file (type png)
 
 <use zrzuty/6.png>
-Package pdftex.def Info: zrzuty/6.png used on input line 182.
-(pdftex.def)             Requested size: 85.35826pt x 151.73839pt.
- [5 <./zrzuty/2.png> <./zrzuty/3.png> <./zrzuty/4.png>]
-<zrzuty/7.png, id=38, 1084.05pt x 1927.2pt>
+Package pdftex.def Info: zrzuty/6.png used on input line 180.
+(pdftex.def)             Requested size: 142.26378pt x 252.89732pt.
+ [6 <./zrzuty/3.png> <./zrzuty/4.png>]
+<zrzuty/7.png, id=42, 1084.05pt x 1927.2pt>
 File: zrzuty/7.png Graphic file (type png)
  <use zrzuty/7.png>
-Package pdftex.def Info: zrzuty/7.png used on input line 189.
-(pdftex.def)             Requested size: 85.35826pt x 151.73839pt.
-
-<zrzuty/8.png, id=39, 1084.05pt x 1927.2pt>
+Package pdftex.def Info: zrzuty/7.png used on input line 187.
+(pdftex.def)             Requested size: 142.26378pt x 252.89732pt.
+ [7 <./zrzuty/5.png> <./zrzuty/6.png>] <zrzuty/8.png, id=46, 1084.05pt x 1927.2
+pt>
 File: zrzuty/8.png Graphic file (type png)
- <use zrzuty/8.png>
-Package pdftex.def Info: zrzuty/8.png used on input line 196.
-(pdftex.def)             Requested size: 85.35826pt x 151.73839pt.
- [6 <./zrzuty/5.png> <./zrzuty/6.png> <./zrzuty/7.png>]
-<zrzuty/9.png, id=44, 1084.05pt x 1927.2pt>
-File: zrzuty/9.png Graphic file (type png)
- <use zrzuty/9.png>
-Package pdftex.def Info: zrzuty/9.png used on input line 203.
-(pdftex.def)             Requested size: 85.35826pt x 151.73839pt.
 
-<zrzuty/10.png, id=45, 1084.05pt x 1927.2pt>
+<use zrzuty/8.png>
+Package pdftex.def Info: zrzuty/8.png used on input line 194.
+(pdftex.def)             Requested size: 142.26378pt x 252.89732pt.
+ <zrzuty/9.png, id=47, 1084.05pt x 1927.2pt>
+File: zrzuty/9.png Graphic file (type png)
+
+<use zrzuty/9.png>
+Package pdftex.def Info: zrzuty/9.png used on input line 201.
+(pdftex.def)             Requested size: 142.26378pt x 252.89732pt.
+ [8 <./zrzuty/7.png> <./zrzuty/8.png>]
+<zrzuty/10.png, id=51, 1084.05pt x 1927.2pt>
 File: zrzuty/10.png Graphic file (type png)
  <use zrzuty/10.png>
-Package pdftex.def Info: zrzuty/10.png used on input line 210.
-(pdftex.def)             Requested size: 85.35826pt x 151.73839pt.
+Package pdftex.def Info: zrzuty/10.png used on input line 208.
+(pdftex.def)             Requested size: 142.26378pt x 252.89732pt.
 
-<zrzuty/11.png, id=46, 1084.05pt x 1927.2pt>
+<zrzuty/11.png, id=52, 1084.05pt x 1927.2pt>
 File: zrzuty/11.png Graphic file (type png)
  <use zrzuty/11.png>
-Package pdftex.def Info: zrzuty/11.png used on input line 216.
-(pdftex.def)             Requested size: 85.35826pt x 151.73839pt.
- [7 <./zrzuty/8.png> <./zrzuty/9.png> <./zrzuty/10.png>] [8 <./zrzuty/11.png>] 
-[9] [10]
-[11] (dokumentacja.aux) ) 
+Package pdftex.def Info: zrzuty/11.png used on input line 214.
+(pdftex.def)             Requested size: 142.26378pt x 252.89732pt.
+ [9 <./zrzuty/9.png> <./zrzuty/10.png>] [10 <./zrzuty/11.png>]
+<zrzuty/modules.png, id=59, 260.77425pt x 347.49825pt>
+File: zrzuty/modules.png Graphic file (type png)
+
+<use zrzuty/modules.png>
+Package pdftex.def Info: zrzuty/modules.png used on input line 236.
+(pdftex.def)             Requested size: 142.26378pt x 189.57631pt.
+ <zrzuty/class_gui.png, id=60, 375.804pt x 427.5975pt>
+File: zrzuty/class_gui.png Graphic file (type png)
+
+<use zrzuty/class_gui.png>
+Package pdftex.def Info: zrzuty/class_gui.png used on input line 260.
+(pdftex.def)             Requested size: 142.26378pt x 161.8689pt.
+
+<zrzuty/class_logic.png, id=62, 502.2765pt x 427.5975pt>
+File: zrzuty/class_logic.png Graphic file (type png)
+
+<use zrzuty/class_logic.png>
+Package pdftex.def Info: zrzuty/class_logic.png used on input line 266.
+(pdftex.def)             Requested size: 142.26378pt x 121.1097pt.
+ [11 <./zrzuty/modules.png>]
+<zrzuty/class_sound.png, id=66, 122.859pt x 302.93175pt>
+File: zrzuty/class_sound.png Graphic file (type png)
+
+<use zrzuty/class_sound.png>
+Package pdftex.def Info: zrzuty/class_sound.png used on input line 272.
+(pdftex.def)             Requested size: 142.26378pt x 350.81865pt.
+
+<zrzuty/class_util.png, id=67, 249.3315pt x 321.6015pt>
+File: zrzuty/class_util.png Graphic file (type png)
+
+<use zrzuty/class_util.png>
+Package pdftex.def Info: zrzuty/class_util.png used on input line 278.
+(pdftex.def)             Requested size: 142.26378pt x 183.50122pt.
+ [12 <./zrzuty/class_gui.png> <./zrzuty/class_logic.png>] [13 <./zrzuty/class_s
+ound.png> <./zrzuty/class_util.png>]
+<zrzuty/plansza.png, id=79, 501.875pt x 384.43625pt>
+File: zrzuty/plansza.png Graphic file (type png)
+ <use zrzuty/plansza.png>
+Package pdftex.def Info: zrzuty/plansza.png used on input line 293.
+(pdftex.def)             Requested size: 227.62204pt x 174.36148pt.
+
+<zrzuty/shuffle.png, id=80, 240.9pt x 157.58875pt>
+File: zrzuty/shuffle.png Graphic file (type png)
+ <use zrzuty/shuffle.png>
+Package pdftex.def Info: zrzuty/shuffle.png used on input line 302.
+(pdftex.def)             Requested size: 227.62204pt x 148.90771pt.
+
+<zrzuty/szufflee.png, id=81, 240.9pt x 157.58875pt>
+File: zrzuty/szufflee.png Graphic file (type png)
+ <use zrzuty/szufflee.png>
+Package pdftex.def Info: zrzuty/szufflee.png used on input line 310.
+(pdftex.def)             Requested size: 227.62204pt x 148.90771pt.
+
+[14 <./zrzuty/plansza.png> <./zrzuty/shuffle.png>] [15 <./zrzuty/szufflee.png>]
+[16] [17] (dokumentacja.aux) ) 
 Here is how much of TeX's memory you used:
- 2535 strings out of 493634
- 31278 string characters out of 3141314
- 91549 words of memory out of 3000000
- 5863 multiletter control sequences out of 15000+200000
+ 2583 strings out of 493634
+ 32291 string characters out of 3141314
+ 91630 words of memory out of 3000000
+ 5903 multiletter control sequences out of 15000+200000
  16680 words of font info for 38 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,6n,24p,726b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Pavlo\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Pavlo\AppData\Local\MiKTeX\2.9\fo
-nts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\Pavlo\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\Pavlo\AppData
-\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Pav
-lo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:
-\Users\Pavlo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm12
-00.pk> <C:\Users\Pavlo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
-600\ecti1200.pk> <C:\Users\Pavlo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecrm2986.pk> <C:\Users\Pavlo\AppData\Local\MiKTeX\2.9\fonts\pk\lj
-four\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\Pavlo\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi600\eccc1728.pk><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on dokumentacja.pdf (12 pages, 1031914 bytes).
+ 27i,6n,24p,726b,293s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Pavlo\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Pavlo\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\Pavlo\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\Pavlo\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\User
+s\Pavlo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk
+> <C:\Users\Pavlo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
+crm1200.pk> <C:\Users\Pavlo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecti1200.pk> <C:\Users\Pavlo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+jknappen\ec\dpi600\ecrm2986.pk> <C:\Users\Pavlo\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\Pavlo\AppData\Local\MiKTeX\
+2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1728.pk><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on dokumentacja.pdf (18 pages, 1445694 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
+ 430 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
