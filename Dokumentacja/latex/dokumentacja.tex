@@ -134,91 +134,89 @@ Podczas gry wyświetlane jest rząd przycisków z cyframi od 1 do 9. W momencie 
 \vfill
 \newpage	
 \section{Interfejs gracza}
-W sekcji tej zaprezentowane zostanie działanie oraz interfejs gry.
-\subsection{Opis elementów GUI}
-Po uruchomieniu gry oczom gracza ukazuje się menu główne. Gracz może uruchomić nową grę, kontynuować rozgrywkę, zobaczyć najlepsze wyniki a także poznać zasady gry w tutorialu.
+W sekcji tej zaprezentowane zostanie działanie oraz interfejs gry.Po uruchomieniu gry oczom gracza ukazuje się menu główne. Gracz może uruchomić nową grę, kontynuować rozgrywkę, zobaczyć najlepsze wyniki a także poznać zasady gry w tutorialu.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=3cm]{zrzuty/1.png}
+	\includegraphics[width=5cm]{zrzuty/1.png}
 	\caption{Menu główne}
 	\label{fig:menu}
 \end{figure}
 Po wybraniu Highscores gracz otrzymuje listę najlepszych wyników podzielonych na poziomy trudności gry.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=3cm]{zrzuty/12.png}
+	\includegraphics[width=5cm]{zrzuty/12.png}
 	\caption{Lista najlepszych wyników}
 	\label{fig:highscores}
 \end{figure}
 Po wyborze nowej gry gracz może podać swój nick poprzez wpisanie go w polu "Enter text...". Ma do wyboru trzy poziomy trudności: Easy, Medium oraz Hard.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=3cm]{zrzuty/2.png}
+	\includegraphics[width=5cm]{zrzuty/2.png}
 	\caption{Menu nowej rozgrywki}
 	\label{fig:menu2}
 \end{figure} 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=3cm]{zrzuty/3.png}
+	\includegraphics[width=5cm]{zrzuty/3.png}
 	\caption{Wybór nicku}
 	\label{fig:wybor_nicku}
 \end{figure}
 Po kliknięciu przycisku Start następuję wygenerowanie planszy i rozpoczyna się właściwa rozgrywka.  
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=3cm]{zrzuty/4.png}
+	\includegraphics[width=5cm]{zrzuty/4.png}
 	\caption{Nowa gra}
 	\label{fig:nowagra}
 \end{figure}
 W trakcie gry mierzony jest czas oraz liczone są punkty. Po wyborze pustego pola zaznaczane jest ono na czerwono i gracz poprzez wybór cyfry z dolnego paska wprowadza wartość do pola.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=3cm]{zrzuty/5.png}
+	\includegraphics[width=5cm]{zrzuty/5.png}
 	\caption{Wybór pola}
 	\label{fig:wybor_pola}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=3cm]{zrzuty/6.png}
+	\includegraphics[width=5cm]{zrzuty/6.png}
 	\caption{Wprowadzenie wartości}
 	\label{fig:wprowadzenie_wartosci}
 \end{figure}
 Gracz ma możliwość sprawdzenia zgodności wprowadzonych wartości z zasadami Sudoku poprzez kliknięcie przycisku Check. W przypadku złamania zasad pojawia się napis "You have errors".
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=3cm]{zrzuty/7.png}
+	\includegraphics[width=5cm]{zrzuty/7.png}
 	\caption{Sprawdzenie planszy w sytuacji złamania zasad Sudoku}
 	\label{fig:check_errors}
 \end{figure}
 Gracz może wyczyścić pole przyciskiem Clear. Wiąże się to jednak z otrzymaniem ujemnych punktów.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=3cm]{zrzuty/8.png}
+	\includegraphics[width=5cm]{zrzuty/8.png}
 	\caption{Wyczyszczenie pola}
 	\label{fig:clear}
 \end{figure}
 W przypadku sprawdzenia planszy i braku niezgodności wyświetlany jest komunikat "You don't have errors".
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=3cm]{zrzuty/9.png}
+	\includegraphics[width=5cm]{zrzuty/9.png}
 	\caption{Sprawdzenie planszy w przypadku braku niezgodności}
 	\label{fig:check_ok}
 \end{figure}
 Po kliknięciu przycisku Pause następuje wstrzymanie rozgrywki i pojawia się lista opcji opcji do wyboru. Gracz może wrócić do gry, włączyć/wyłączyć muzykę, wyjść do menu głównego lub wyłączyć grę.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=3cm]{zrzuty/10.png}
+	\includegraphics[width=5cm]{zrzuty/10.png}
 	\caption{Menu w trakcie gry przy włączonej muzyce}
 	\label{fig:menu_pause}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=3cm]{zrzuty/11.png}
+	\includegraphics[width=5cm]{zrzuty/11.png}
 	\caption{Menu w trakcie gry przy wyłączonej muzyce}
 	\label{fig:menu_pause2}
 \end{figure}
 
-\subsection{Jak grać}
+
 
 
 
@@ -226,19 +224,108 @@ Po kliknięciu przycisku Pause następuje wstrzymanie rozgrywki i pojawia się l
 	\newpage
 \section{Struktura aplikacji}
 \subsection{Moduły}
-\subsection{Diagram klas}
-\subsection{Algorytm generowania plansz}
+W aplikacji można wyodrębnić następujące moduły:
+\begin{itemize}
+	\item GUI
+	\item Logic
+	\item SoundControl
+	\item Utilities
+	\item Plugins
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=8cm]{diagramy/moduly.png}
+	\caption{Moduły programu}
+	\label{fig:modules}
+\end{figure}
 
+Moduł Logic jest odpowiedzialny za mechanikę gry. Zapewnia on zachowanie zasad gry w sudoku. Generuje plansze według podanego poziomu trudności. Ponadto odpowiada za dodatkową funkcjonalność. Dodatkowe udostępnione opcje to: 
+-możliwość cofania ruchu gracz( działa to na zasadzie przywrócenia poprzedniego stanu planszy, stanu te przechowujemy w liście dzięki czemu możemy przejść od ostatniego ruchu do pierwszego, a nawet zresetować planszę do stanu pierwotnego), 
+-wyświetlanie cyfr możliwych do wstawienia( jest to realizowane poprzez ustawienie przycisków wyboru cyfry na aktywne, zaś tych przycisków, które nie spełniają zasad na nieaktywne),
+- kontynuowanie niedokończonej rozgrywki( jest możliwe dzięki zapisywaniu stanu planszy w pamięci telefonu, a także nicku gracza i jego wyniku),
+- tablica wyników, która przechowuje wyniki odpowiednio dla poziomu łatwego, normalnego oraz trudnego w dwóch kategoriach odpowiadających trybom gry(klasyczny, gra na czas) w których zostały zdobyte. 
+
+
+Moduł SoundControl służy do kontrolowania muzyki grającej w tle, a także różnorakich efektów dźwiękowych m.in. dźwięk wygranej, dźwięk naciskania przycisków, melodia pobicia rekordu.
+
+
+Moduł GUI jest odpowiedzialny za odpowiednie rozlokowanie elementów menu i widoku gry. Ponadto pośredniczy on między akcjami gracza, a modułem logiki. Wszelkie interakcja z aplikacją odbywa się poprzez tą warstwę i jej elementy(przyciski).
+
+
+Moduł Utilities przechowuje pomniejsze pomocne klasy.
+
+Moduł Plugins zawiera klasę do obsługi JSON.
+\subsection{Diagramy klas}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=5cm]{diagramy/class_gui.png}
+	\caption{Diagram klas dla modułu GUI}
+	\label{fig:class_gui}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=5cm]{diagramy/class_logic.png}
+	\caption{Diagram klas dla modułu Logic}
+	\label{fig:class_logic}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=5cm]{diagramy/class_sound.png}
+	\caption{Diagram klas dla modułu Sound}
+	\label{fig:class_sound}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=5cm]{diagramy/class_util.png}
+	\caption{Diagramy klas dla modułu Utilities}
+	\label{fig:class_util}
+\end{figure}
+\newpage
+\subsection{Algorytm generowania plansz}
+W pierwszym kroku generowana jest plansza spełniająca zasady Sudoku, to znaczy:
+\begin{itemize}
+	\item Każda cyfra może się pojawić tylko raz w każdym wierszu,
+	\item Każda cyfra może się pojawić tylko raz w każdej kolumnie,
+	\item Każda cyfra może się pojawić tylko raz w każdym obszarze.
+\end{itemize}
+Przyjmuje ona następującą postać
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=8cm]{zrzuty/plansza.png}
+	\caption{Plansza po pierwszym wygenerowaniu}
+	\label{fig:first_gen_board}
+\end{figure}
+Następnie, aby uzyskać różne warianty planszy dokonuje się szeregu transformacji, które nie będą prowadzić do złamania zasad gry. Wśród nich mamy:
+\begin{itemize}
+	\item zamiana dwóch wierszy w ramach tej samej grupy
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8cm]{zrzuty/shuffle.png}
+		\caption{Zamiana wierszy}
+		\label{fig:szuffle1}
+	\end{figure}
+	\item zamiana dwóch kolumn w ramach tej samej grupy
+	\item zamiana dwóch grup wierszy (9x3)
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=8cm]{zrzuty/szufflee.png}
+		\caption{Zamiana grup wierszy}
+		\label{fig:szuffle2}
+	\end{figure}
+	\item zamiana dwóch grupy kolumn
+\end{itemize}
+Kolejnym krokiem jest wyczyszczenie części pól. Czyszczone są pola, które nie zakłócają warunku jednego możliwego poprawnego rozwiązania.
 \vfill
 \newpage
 \section{Testy i wdrożenia}
 \subsection{Wdrożenie}
-Aplikacja została zaprojektowana i zrealizowana w celach niekomercyjnych, dlatego nie została opublikowana w Sklepie Play. Jednakże udostępniliśmy cały projekt poprzez publiczne repozytorium github z licencją opensouce MIT.
+Aplikacja została zaprojektowana i zrealizowana w celach niekomercyjnych, dlatego nie została opublikowana w Sklepie Play. Jednakże udostępniliśmy cały projekt poprzez publiczne repozytorium github z licencją opensource MIT.
 \subsection{Testy}
 Aplikacja została przetestowana na poniższych modelach telefonów:
 \begin{itemize}
-\item przykład LG Spirit - Android 6.0 - Gra działała płynnie, nie wykryto błędów uniemożliwiających zakończenie gry.
-\item
+\item LG Spirit - Android 6.0 - Gra działała płynnie, nie wykryto błędów uniemożliwiających zakończenie gry,
+\item Xiaomi Mi4c - 5.1.1 - jak wyżej.	
 \end{itemize}
 
 \subsection{Wnioski}
