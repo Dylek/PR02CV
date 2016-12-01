@@ -228,12 +228,13 @@ W aplikacji można wyodrębnić następujące moduły:
 \begin{itemize}
 	\item GUI
 	\item Logic
-	\item SoundModule
+	\item SoundControl
 	\item Utilities
+	\item Plugins
 \end{itemize}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=5cm]{zrzuty/modules.png}
+	\includegraphics[width=8cm]{diagramy/moduly.png}
 	\caption{Moduły programu}
 	\label{fig:modules}
 \end{figure}
@@ -245,7 +246,7 @@ Moduł Logic jest odpowiedzialny za mechanikę gry. Zapewnia on zachowanie zasad
 - tablica wyników, która przechowuje wyniki odpowiednio dla poziomu łatwego, normalnego oraz trudnego w dwóch kategoriach odpowiadających trybom gry(klasyczny, gra na czas) w których zostały zdobyte. 
 
 
-Moduł SoundModule służy do kontrolowania muzyki grającej w tle, a także różnorakich efektów dźwiękowych m.in. dźwięk wygranej, dźwięk naciskania przycisków, melodia pobicia rekordu.
+Moduł SoundControl służy do kontrolowania muzyki grającej w tle, a także różnorakich efektów dźwiękowych m.in. dźwięk wygranej, dźwięk naciskania przycisków, melodia pobicia rekordu.
 
 
 Moduł GUI jest odpowiedzialny za odpowiednie rozlokowanie elementów menu i widoku gry. Ponadto pośredniczy on między akcjami gracza, a modułem logiki. Wszelkie interakcja z aplikacją odbywa się poprzez tą warstwę i jej elementy(przyciski).
@@ -253,29 +254,30 @@ Moduł GUI jest odpowiedzialny za odpowiednie rozlokowanie elementów menu i wid
 
 Moduł Utilities przechowuje pomniejsze pomocne klasy.
 
+Moduł Plugins zawiera klasę do obsługi JSON.
 \subsection{Diagramy klas}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=5cm]{zrzuty/class_gui.png}
+	\includegraphics[width=5cm]{diagramy/class_gui.png}
 	\caption{Diagram klas dla modułu GUI}
 	\label{fig:class_gui}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=5cm]{zrzuty/class_logic.png}
+	\includegraphics[width=5cm]{diagramy/class_logic.png}
 	\caption{Diagram klas dla modułu Logic}
 	\label{fig:class_logic}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=5cm]{zrzuty/class_sound.png}
+	\includegraphics[width=5cm]{diagramy/class_sound.png}
 	\caption{Diagram klas dla modułu Sound}
 	\label{fig:class_sound}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=5cm]{zrzuty/class_util.png}
+	\includegraphics[width=5cm]{diagramy/class_util.png}
 	\caption{Diagramy klas dla modułu Utilities}
 	\label{fig:class_util}
 \end{figure}
