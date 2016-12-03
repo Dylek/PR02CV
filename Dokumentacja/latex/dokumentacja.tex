@@ -110,7 +110,7 @@ Paweł \textsc{Ogorzały}
 	
 	\section{Sudoku}
 	\subsection{Co to Sudoku}
-W Sudoku gra się na planszy o wymiarach 9x9 podzielonej na mniejsze "obszary" o wymiarach 3x3.  Na początku gry niektóre z pól planszy Sudoku są już wypełnione liczbami.  Celem gry jest uzupełnienie pozostałych pól planszy cyframi od 1 do 9 (po jednej cyfrze w każdym polu) przy zachowaniu następujących reguł:
+W Sudoku gra się na planszy o wymiarach 9x9 podzielonej na mniejsze \"obszary\" o wymiarach 3x3.  Na początku gry niektóre z pól planszy Sudoku są już wypełnione liczbami.  Celem gry jest uzupełnienie pozostałych pól planszy cyframi od 1 do 9 (po jednej cyfrze w każdym polu) przy zachowaniu następujących reguł:
 \begin{itemize}
 \item Każda cyfra może się pojawić tylko raz w każdym wierszu,
 \item Każda cyfra może się pojawić tylko raz w każdej kolumnie,
@@ -129,7 +129,30 @@ Za metodykę pracy wybrano metodę przyrostową.
 Na ilość uzyskanych punktów przez gracza, wpływa ilość popełnianych pomyłek oraz czas ukończenia rozgrywki. Aplikacja posiada lokalną, dla danego urządzenia, tablicę wyników, z podziałem na poziomy trudności.\\
 
 Podczas gry wyświetlane jest rząd przycisków z cyframi od 1 do 9. W momencie wybrania pola, które chcemy uzupełnić rząd podświetli możliwe uzupełnienia kwadratu 9x9. Ponadto w razie błędnego wypełnienia pola, możemy je wyczyścić.
+\subsection{Specyfikacja wymagań}
+Poniższa tabela przedstawia opcje, wymagane przez klienta, które zostały omówione podczas pierwszego spotkania z nim.
 
+\begin{center}
+	\begin{tabular}{|l|p{10cm}|l|l|}
+	\hline
+	\multicolumn{4}{|c|}{Specyfikacja wymagań SUDOKU}\\
+	\hline	 
+	Lp. & Opis & Termin & Priorytet \\ \hline
+	1 & Aplikacja jest w stanie sprawdzać zachowanie zasad sudoku na planszy & Wersja Aplha & Wysoki  \\ \hline
+	2 & Płynna praca aplikacji na urządzeniach z systemem Android od wersji 4.4 & Wersja oficjalna & Średni  \\ \hline
+	3 & Gra powinna posiadać intuicyjny interfejs, który szybko można zrozumieć & Wersja Beta & Niski  \\ \hline
+	4 & Gra nie może posiadać żadnych błędów mechaniki, które uniemożliwią ukończenie gry & Wersja oficjalna & Wysoki  \\ \hline
+	5 & Tabela wyników gracza ma być lokalnie przechowywana na telefonie. & Wersja Beta & Średni  \\ \hline
+	6 & Uzupełnianie sudoku ma polegać na wybraniu pola w które chcemy wstawić cyfrę, a następnie wybraniu cyfry z pola przycisków cyfr & Wersja Alpha & Wysoki  \\ \hline
+	7 & Gracz ma mieć możliwość wznowienia nieukończonej gry & Wersja Beta & Średni  \\ \hline
+	8 & Podczas gry ma grać muzyka. Różna w menu i czasie rozgrywki. & Wesja oficjalna & Wysoki  \\ \hline
+	9 & Wciśnięcie przycisku wywołuje dźwięk wciśnienia przycisku & Wersja Alpha & Wysoki  \\ \hline
+	10 & Menu gry ma posiadać opcje: wybory poziomu trudności gry, wpisanie nicku gracza, rozpoczęcie gry, wyświetlenie tabeli wyników, wyświetlenie zasad sudoku i wyjaśnień mechaniki gry. & Wersja oficjalna & Wysoki  \\ \hline
+	11 & Instalator aplikacji nie może przekraczać 30MB & Wersja oficjalna & Wysoki  \\ \hline
+	12 & Szata graficzna aplikacji ma być stonowana, wręcz minimalistyczna & Wersja Beta & Średni  \\ \hline
+	
+	\end{tabular}
+\end{center}
 	
 \vfill
 \newpage	
@@ -148,7 +171,7 @@ Po wybraniu Highscores gracz otrzymuje listę najlepszych wyników podzielonych 
 	\caption{Lista najlepszych wyników}
 	\label{fig:highscores}
 \end{figure}
-Po wyborze nowej gry gracz może podać swój nick poprzez wpisanie go w polu "Enter text...". Ma do wyboru trzy poziomy trudności: Easy, Medium oraz Hard.
+Po wyborze nowej gry gracz może podać swój nick poprzez wpisanie go w polu \"Enter text...\". Ma do wyboru trzy poziomy trudności: Easy, Medium oraz Hard.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=5cm]{zrzuty/2.png}
@@ -181,7 +204,7 @@ W trakcie gry mierzony jest czas oraz liczone są punkty. Po wyborze pustego pol
 	\caption{Wprowadzenie wartości}
 	\label{fig:wprowadzenie_wartosci}
 \end{figure}
-Gracz ma możliwość sprawdzenia zgodności wprowadzonych wartości z zasadami Sudoku poprzez kliknięcie przycisku Check. W przypadku złamania zasad pojawia się napis "You have errors".
+Gracz ma możliwość sprawdzenia zgodności wprowadzonych wartości z zasadami Sudoku poprzez kliknięcie przycisku Check. W przypadku złamania zasad pojawia się napis \"You have errors\".
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=5cm]{zrzuty/7.png}
@@ -195,7 +218,7 @@ Gracz może wyczyścić pole przyciskiem Clear. Wiąże się to jednak z otrzyma
 	\caption{Wyczyszczenie pola}
 	\label{fig:clear}
 \end{figure}
-W przypadku sprawdzenia planszy i braku niezgodności wyświetlany jest komunikat "You don't have errors".
+W przypadku sprawdzenia planszy i braku niezgodności wyświetlany jest komunikat \"You don't have errors\".
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=5cm]{zrzuty/9.png}
@@ -239,22 +262,22 @@ W aplikacji można wyodrębnić następujące moduły:
 	\label{fig:modules}
 \end{figure}
 
-Moduł Logic jest odpowiedzialny za mechanikę gry. Zapewnia on zachowanie zasad gry w sudoku. Generuje plansze według podanego poziomu trudności. Ponadto odpowiada za dodatkową funkcjonalność. Dodatkowe udostępnione opcje to: 
--możliwość cofania ruchu gracz( działa to na zasadzie przywrócenia poprzedniego stanu planszy, stanu te przechowujemy w liście dzięki czemu możemy przejść od ostatniego ruchu do pierwszego, a nawet zresetować planszę do stanu pierwotnego), 
--wyświetlanie cyfr możliwych do wstawienia( jest to realizowane poprzez ustawienie przycisków wyboru cyfry na aktywne, zaś tych przycisków, które nie spełniają zasad na nieaktywne),
-- kontynuowanie niedokończonej rozgrywki( jest możliwe dzięki zapisywaniu stanu planszy w pamięci telefonu, a także nicku gracza i jego wyniku),
-- tablica wyników, która przechowuje wyniki odpowiednio dla poziomu łatwego, normalnego oraz trudnego w dwóch kategoriach odpowiadających trybom gry(klasyczny, gra na czas) w których zostały zdobyte. 
+Moduł Logic jest odpowiedzialny za mechanikę gry. Zapewnia on zachowanie zasad gry w sudoku. Generuje plansze według podanego poziomu trudności. Ponadto odpowiada za dodatkową funkcjonalność. Dodatkowe udostępnione opcje to: \\
+%-możliwość cofania ruchu gracz( działa to na zasadzie przywrócenia poprzedniego stanu planszy, stanu te przechowujemy w liście dzięki czemu możemy przejść od ostatniego ruchu do pierwszego, a nawet zresetować planszę do stanu pierwotnego), \\
+-wyświetlanie cyfr możliwych do wstawienia( jest to realizowane poprzez ustawienie przycisków wyboru cyfry na aktywne, zaś tych przycisków, które nie spełniają zasad na nieaktywne),\\
+- kontynuowanie niedokończonej rozgrywki( jest możliwe dzięki zapisywaniu stanu planszy w pamięci telefonu, a także nicku gracza i jego wyniku),\\
+- tablica wyników, która przechowuje wyniki odpowiednio dla poziomu łatwego, normalnego oraz trudnego w dwóch kategoriach odpowiadających trybom gry(klasyczny, gra na czas) w których zostały zdobyte. \\
 
 
-Moduł SoundControl służy do kontrolowania muzyki grającej w tle, a także różnorakich efektów dźwiękowych m.in. dźwięk wygranej, dźwięk naciskania przycisków, melodia pobicia rekordu.
+Moduł SoundControl służy do kontrolowania muzyki grającej w tle, a także różnorakich efektów dźwiękowych m.in. dźwięk wygranej, dźwięk naciskania przycisków, melodia pobicia rekordu.\\
 
 
-Moduł GUI jest odpowiedzialny za odpowiednie rozlokowanie elementów menu i widoku gry. Ponadto pośredniczy on między akcjami gracza, a modułem logiki. Wszelkie interakcja z aplikacją odbywa się poprzez tą warstwę i jej elementy(przyciski).
+Moduł GUI jest odpowiedzialny za odpowiednie rozlokowanie elementów menu i widoku gry. Ponadto pośredniczy on między akcjami gracza, a modułem logiki. Wszelkie interakcja z aplikacją odbywa się poprzez tą warstwę i jej elementy(przyciski).\\
 
 
-Moduł Utilities przechowuje pomniejsze pomocne klasy.
+Moduł Utilities przechowuje pomniejsze pomocne klasy. \\
 
-Moduł Plugins zawiera klasę do obsługi JSON.
+Moduł Plugins zawiera dodatki z AppStore Unity. Pluginem, z który wykorzystano jet klasa do obsługi JSONa w Unity.\\
 \subsection{Diagramy klas}
 
 \begin{figure}[H]
@@ -319,26 +342,43 @@ Kolejnym krokiem jest wyczyszczenie części pól. Czyszczone są pola, które n
 \vfill
 \newpage
 \section{Testy i wdrożenia}
-\subsection{Wdrożenie}
-Aplikacja została zaprojektowana i zrealizowana w celach niekomercyjnych, dlatego nie została opublikowana w Sklepie Play. Jednakże udostępniliśmy cały projekt poprzez publiczne repozytorium github z licencją opensource MIT.
-\subsection{Testy}
-Aplikacja została przetestowana na poniższych modelach telefonów:
-\begin{itemize}
-\item LG Spirit - Android 6.0 - Gra działała płynnie, nie wykryto błędów uniemożliwiających zakończenie gry,
-\item Xiaomi Mi4c - 5.1.1 - jak wyżej.	
-\end{itemize}
 
-\subsection{Wnioski}
-Na podstawie testów i komentarzy osób testujących oraz spełnionych wymagań, projekt można uznać za pomyślnie zakończony.
+\subsection{Testy alfa}
+Początkowe testy były prowadzone przez samych twórców aplikacji. Program Unity3D, zawiera w sobie opcję uruchamiania zaprojektowanych w nim gier, niezależnie od tego na jaką platformę piszemy. Umożliwiło to wprowadzanie częstych, małych zmian, które były od razu sprawdzane.\\
+
+ Po zaakceptowaniu pierwszej wersji alpha gry, zaczęto tworzyć buildy z możliwością ich instalacji na telefonach z systemem Android. Aplikację instalowano i otwierano na kilku modelach telefonów, które miały różne wersje systemu. Osobami testującymi byli twórcy i ich najbliżsi znajomi. Dzięki temu uzyskano informację o najróżniejszych problemach i niedociągnięciach, m.in. przyciski wchodzące na tekst, napis z przycisku wychodzący poza przycisk, zmiana wartości nie na tym kafelku planszy co trzeba itp.
+ 
+ \subsection{Testy beta}
+Po poprawkach błędów i dopracowaniu mechaniki, na forum zespołu zaprezentowano wersję beta. Uznano, że o testowanie poprosimy studentów krakowskich uczelni wyższych. Dostarczyło to kolejnych uwag na temat błędów i nieodpowiedniego działania na niektórych modelach telefonów. O dziwo uporano się z tymi problemami szybciej niż przypuszczaliśmy.
+
+\subsection{Wdrożenie}
+Dzięki zakończeniu rozwiązywania problemów wersji beta gry, możliwe stało się zbudowanie wersji oficjalnej i zaprezentowanie jej zleceniodawcy. \\
+
+Na spotkaniu z klientem okazało się, że musimy wprowadzić kilka dodatkowych opcji. Z tego powodu premiera gry została opóźniona o 2 miesiące po pierwotnym terminie. Na szczęście nowe opcje nie ingerowały w dotychczasowy kod aplikacji, dzięki czemu testy przeprowadzono bardzo sprawnie. W międzyczasie zaczęto promować grę w internecie.\\
+
+Na drugim spotkaniu klient wyraził zadowolenie i dał zielone światło na opublikowanie gry w Sklepie Play w cenie 4.99PLN.\\
+
+
+%Aplikacja została zaprojektowana i zrealizowana w celach niekomercyjnych, dlatego nie została opublikowana w Sklepie Play. Jednakże udostępniliśmy cały projekt poprzez publiczne repozytorium github z licencją opensource MIT.
+
+
+%Aplikacja została przetestowana na poniższych modelach telefonów:
+%\begin{itemize}
+%\item LG Spirit - Android 6.0 - Gra działała płynnie, nie wykryto błędów uniemożliwiających zakończenie gry,
+%\item Xiaomi Mi4c - 5.1.1 - jak wyżej.	
+%\end{itemize}
+
+%\subsection{Wnioski}
+%Na podstawie testów i komentarzy osób testujących oraz spełnionych wymagań, projekt można uznać za pomyślnie zakończony.
 
 
 \vfill
 \newpage
 \section{Rozwój}
-Projekt w przyszłości można rozwinąć o kilka rzeczy:
+Klient wyraził chęć rozwoju gry o kolejne opcje. Jednakże przekraczają one dotychczasową specyfikację wymagań i warunki umowy. Wstępnie ustalono, że gra zostanie wzbogacona o:
 \begin{itemize}
 \item połączenie z mediami społecznościowymi, t.j. facebook, twitter,
-\item tabele wyników przechowywaną globalnie na serwerze,
+\item tabelę wyników przechowywaną globalnie na serwerze,
 \item system wyświetlający reklamy,
 \item system rejestracji użytkowników, dla zapewnienia unikalnych nicków graczy.
 \end{itemize}
